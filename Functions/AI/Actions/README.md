@@ -1,71 +1,71 @@
-# Task Force Waypoint Actions
+# Acciones de Waypoints de Fuerzas de Tarea
 
-This directory contains a set of functions for managing AI unit waypoints and behaviors in the FLO mission framework.
+Este directorio contiene un conjunto de funciones para gestionar los waypoints y comportamientos de las unidades AI en el marco de la misión FLO.
 
-## Core Functions
+## Funciones Principales
 
 ### `FLO_fnc_addWaypoint`
-The base function for adding waypoints to a group. All other waypoint functions use this.
+La función base para agregar waypoints a un grupo. Todas las demás funciones de waypoint se basan en esta.
 
 ### `FLO_fnc_getTargetType`
-Categorizes units and vehicles into types (MAN, CAR, ARMOR, HELI, etc.) for determining appropriate behaviors.
+Clasifica las unidades y vehículos en tipos (MAN, CAR, ARMOR, HELI, etc.) para determinar comportamientos apropiados.
 
-## Area Action Functions
+## Funciones de Acción en Área
 
-These functions are used to assign groups to perform specific tasks in an area:
+Estas funciones se utilizan para asignar tareas específicas a los grupos dentro de un área:
 
 ### `FLO_fnc_attackArea`
-Assigns a group to attack a specific area. Behavior varies by unit type:
-- Infantry will move to the area and execute a taskAttack
-- Aircraft will perform search and destroy missions and then land
-- Vehicles will perform search and destroy missions
+Asigna un grupo para atacar un área específica. El comportamiento varía según el tipo de unidad:
+- La infantería se moverá al área y ejecutará un ataque (taskAttack).
+- Los aviones realizarán misiones de búsqueda y destrucción, y luego aterrizarán.
+- Los vehículos realizarán misiones de búsqueda y destrucción.
 
 ### `FLO_fnc_defendArea`
-Assigns a group to defend a specific area:
-- Infantry will garrison buildings and use static weapons
-- Aircraft will patrol and land when done
-- Vehicles will perform perimeter security
+Asigna un grupo para defender una área específica:
+- La infantería guarnecerá edificios y usará armas estáticas.
+- Los aviones patrullarán y aterrizarán al finalizar la misión.
+- Los vehículos realizarán seguridad perimetral.
 
 ### `FLO_fnc_patrolArea`
-Assigns a group to patrol a specific area:
-- Infantry will perform random patrols and search nearby
-- Aircraft will fly between randomly generated points
-- Vehicles will patrol a wider area
+Asigna un grupo para patrullar una área específica:
+- La infantería realizará patrullas aleatorias y buscará en las cercanías.
+- Los aviones volarán entre puntos generados aleatoriamente.
+- Los vehículos patrullarán una área más amplia.
 
 ### `FLO_fnc_reconArea`
-Assigns a group to perform reconnaissance in a specific area:
-- Infantry will use stealth movement and report enemy contacts
-- Aircraft will perform high-altitude surveillance
-- Vehicles will perform wider perimeter checks
+Asigna un grupo para realizar reconocimiento en un área específica:
+- La infantería usará movimiento sigiloso y reportará contactos enemigos.
+- Los aviones realizarán vigilancia a gran altitud.
+- Los vehículos realizarán inspecciones perimetrales más amplias.
 
-## Task Functions
+## Funciones de Tareas
 
-These are lower-level functions that implement specific tactical behaviors:
+Estas son funciones de nivel inferior que implementan comportamientos tácticos específicos:
 
 ### `FLO_fnc_taskAttack`
-Orders a group to attack a specific position using search and destroy tactics.
+Ordena a un grupo atacar una posición específica utilizando tácticas de búsqueda y destrucción.
 
 ### `FLO_fnc_taskDefend`
-Orders a group to defend a position by manning static weapons, occupying buildings, and patrolling.
+Ordena a un grupo defender una posición mediante el uso de armas estáticas, ocupando edificios y patrullando.
 
 ### `FLO_fnc_taskPatrol`
-Creates a pattern of waypoints for a group to patrol around a central position.
+Crea un patrón de waypoints para que un grupo patrulle alrededor de una posición central.
 
 ### `FLO_fnc_reconAreaAction`
-Called when a unit reaches a recon waypoint to report enemy presence to the AI commander.
+Se llama cuando una unidad llega a un waypoint de reconocimiento para reportar la presencia de enemigos al comandante AI.
 
-## Usage Example
+## Ejemplo de Uso
 
 ```sqf
-// Group attacking an area
+// Grupo atacando un área
 [_myGroup, _targetPosition] call FLO_fnc_attackArea;
 
-// Group defending a position
+// Grupo defendiendo una posición
 [_myGroup, _objectivePosition] call FLO_fnc_defendArea;
 
-// Group patrolling with a 500m radius
+// Grupo patrullando con un radio de 500m
 [_myGroup, _patrolCenter, 500] call FLO_fnc_patrolArea;
 
-// Group performing recon
+// Grupo realizando reconocimiento
 [_myGroup, _reconPosition] call FLO_fnc_reconArea;
-``` 
+```
