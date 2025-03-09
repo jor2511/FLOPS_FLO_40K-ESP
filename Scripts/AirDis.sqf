@@ -1,6 +1,6 @@
 sleep 18 ;
 
-["showNotification", ["SUPPORT DISABLED", "Enemy Aerial Support Dismantled For the Next Hour", "success"]] call FLO_fnc_intelSystem;
+["showNotification", ["Apoyo Mermado", "Espacio Aereo Asegurado por la proxima Hora", "success"]] call FLO_fnc_intelSystem;
 
 AIRDIS = 1;
 publicVariable "AIRDIS";
