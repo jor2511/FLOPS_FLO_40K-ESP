@@ -28,8 +28,11 @@ Hay dos formas de crear facciones:
 1. Para uso individual o de comunidad:
 
 Se recomienda utilizar los archivos:
+
     CUSTOM_CIVILIAN_FACTION
+    
     CUSTOM_FRIENDLY_FACTION
+    
     CUSTOM_ENEMY_FACTION
 Para contribuciones en GitHub (uso público):
     Crea un nuevo archivo de facción en Scripts/factions/ (por ejemplo, opf_custom.sqf) con la siguiente estructura:
