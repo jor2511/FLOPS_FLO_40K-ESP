@@ -4,7 +4,7 @@
 
 A dynamic frontline operations mission for Arma 3 that creates an evolving battlefield with intelligent OPFOR forces, logistics systems, and garrison management.
 
-## Features
+## Caracteristicas
 - Dynamic frontline system with intelligent OPFOR forces
 - Advanced logistics and supply network
 - Garrison management system
