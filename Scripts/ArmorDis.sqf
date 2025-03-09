@@ -1,7 +1,7 @@
 sleep 18 ;
 
 
-["showNotification", ["SUPPORT DISABLED", "Enemy Armored Support Dismantled For the Next Hour", "success"]] call FLO_fnc_intelSystem;
+["showNotification", ["Apoyo Reducido", "Linea Blindad Enemiga Mitigada por 1 Hora", "success"]] call FLO_fnc_intelSystem;
 
 
 
