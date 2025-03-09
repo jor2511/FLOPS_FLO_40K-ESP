@@ -29,8 +29,8 @@ params [
 ];
 
 // System configuration constants
-private _INTEL_DECAY_RATE = 0.1;        // Intel points lost per minute
-private _RADIO_TOWER_BONUS = 0.2;       // Multiplier for intel gain per radio tower
+private _INTEL_DECAY_RATE = 0.01;        // Intel points lost per minute
+private _RADIO_TOWER_BONUS = 0.7;       // Multiplier for intel gain per radio tower
 private _MAX_INTEL_LEVEL = 100;         // Maximum intel level
 private _MIN_INTEL_LEVEL = 0;           // Minimum intel level
 private _DECAY_INTERVAL = 60;           // Seconds between decay checks
@@ -203,7 +203,7 @@ if (isServer && isNil "FLO_Intel_System") then {
                 
                 // Format message
                 private _formattedMsg = format [
-                    "<t color='%1' font='PuristaBold' align='right' shadow='1' size='1.2'>INTELLIGENCE UPDATE</t><br/><t align='right' shadow='1' size='1'>%2</t>",
+                    "<t color='%1' font='PuristaBold' align='right' shadow='1' size='1.2'>INTELIGENCIA OBTENIDA</t><br/><t align='right' shadow='1' size='1'>%2</t>",
                     _color,
                     _message
                 ];
