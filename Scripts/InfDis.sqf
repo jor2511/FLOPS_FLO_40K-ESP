@@ -1,6 +1,6 @@
 sleep 18;
 
-["showNotification", ["SUPPORT DISABLED", "Enemy Heavy Weapons Support Dismantled For the Next Hour", "success"]] call FLO_fnc_intelSystem;
+["showNotification", ["Apoyo Mermado", "Apoyo Pesado Enemigo Mermado por 1 Hora", "success"]] call FLO_fnc_intelSystem;
 
 INFDIS = 1;
 publicVariable "INFDIS";
