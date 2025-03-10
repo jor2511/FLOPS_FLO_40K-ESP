@@ -4,9 +4,9 @@ if (count _allFOBMarks == 0 ) then {
 	playMusic "EventTrack02_F_Curator";
 
 	
- hint "_You Lost the Last FOB_";
+ hint "_Perdiste Tu ultimo FOB_";
 sleep 4;	
- hint "_Emergency FOB Activated for The Commander_";
+ hint "_FOB de emergencia Activado_";
 
 
 
