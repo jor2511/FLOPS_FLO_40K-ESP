@@ -12,7 +12,7 @@ private _fnc_setupBuildingHandlers = {
     {
         _x removeAllEventHandlers "Killed";
         _x addEventHandler ["Killed", {
-            [playerSide, "HQ"] commandChat "No Se permite la destrucción Civil !";
+            [playerSide, "HQ"] commandChat "No se permite la destrucción Civil !";
             [] execVM "Scripts\ReputationMinus.sqf";
             [] execVM "Scripts\Civ_Relations.sqf";
         }];
