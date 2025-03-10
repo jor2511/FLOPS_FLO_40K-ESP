@@ -24,7 +24,7 @@ openMap true;
 
 sleep 5;
 
-["showNotification", ["CIVILIAN MISSION", "Deliver Resources - Transport the Cargo to the Destination", "info"]] call FLO_fnc_intelSystem;
+["showNotification", ["Mision Civil", "Llevar Recursos Hacia su destino", "info"]] call FLO_fnc_intelSystem;
 
 //////GROUPS/////////////////////////////////////////////////////////////////////////////////////////
 
@@ -46,7 +46,7 @@ _TFOBA setTriggerActivation ["NONE", "PRESENT", false];
 _TFOBA setTriggerStatements [ 
 "count (thisTrigger nearObjects ['IG_supplyCrate_F', 20]) > 0",  
 "  
-private _MMarks = allMapMarkers select { markerText _x == 'Deliver Resources'};
+private _MMarks = allMapMarkers select { markerText _x == 'Llevar Recursos'};
 private _M = [_MMarks,  thisTrigger] call BIS_fnc_nearestPosition;
 deleteMarker _M ; 
 
