@@ -97,6 +97,6 @@ false
 
 }else{hint "Sin Recursos";};
 
-}else{  hint "Sin Autorizacion!"; };
+}else{  hint "Sin Autorizacion"; };
 
 	closeDialog 0;
