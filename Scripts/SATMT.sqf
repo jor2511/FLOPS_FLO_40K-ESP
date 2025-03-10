@@ -6,17 +6,17 @@ closeDialog 0;
 SatTrack = false ;
 
 openMap [true, true]; 
-hint "Select Satellite Coordination"; 
+hint "Seleccione Coordinador Imperial"; 
 onMapSingleClick {
 onMapSingleClick {}; 
 TSAT setpos _pos;
-hint 'Satellite Coordination Confirmed'; 
-openMap [true, false]; 
+hint 'Confirmada Coordinacion Armada Imperialis'; 
+openMap [true, false];  
 openMap [false, false]; 
-createDialog "Satellite_Control_Tablet";
+createDialog "Enlace_Armada_Imperial";
 HCAM_0 cameraEffect ["Internal", "Back", "HCAM_S"]; 
 hint ""; 
 
 };
 
-} else { hint "only Admins and Commanders Have Access";};
+} else { hint "Solo Altos Mandos";};
