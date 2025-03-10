@@ -210,12 +210,12 @@ if (typeOf _TV == "Land_Tablet_02_sand_F" or typeOf _TV == "Land_Tablet_02_F" or
 _TV setObjectTextureGlobal [0, "#(argb,512,512,1)r2t(HCAM_T,1.333)"];
 };
 
-createDialog "Satellite_Control_Tablet";
+createDialog "Enlace_Armada_Imperial";
 HCAM_0 cameraEffect ["Internal", "Back", "HCAM_S"]; 
 hint ""; 
 };
 
-} else { hint "only Admins and Commanders Have Access";};
+} else { hint "Solo Altos Mandos";};
 
 
 
