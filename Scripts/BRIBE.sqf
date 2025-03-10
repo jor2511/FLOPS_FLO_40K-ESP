@@ -15,8 +15,8 @@ _mrkr setMarkerText str _NewScore;
 
 sleep 12;
 
-["showNotification", ["REPUTATION", "Increased + + + (Bribe Successful)", "success"]] call FLO_fnc_intelSystem;
+["showNotification", ["Reputación", "Mejorada + + + (Soborno Efectivo)", "success"]] call FLO_fnc_intelSystem;
 
-}else{hint "Not enough Resources"; };
-}else{  hint "You are not authorized for this Request Soldier!"; };
+}else{hint "Sin Recursos"; };
+}else{  hint "Sin Autorización, Policia Militar Avisada"; };
 

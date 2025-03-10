@@ -4,29 +4,38 @@
 
 A dinamico frontline operations mission for Arma 3 that creates an evolving battlefield with intelligent OPFOR forces, logistics systems, and garrison management.
 
-## Caracteristicas
-- Dynamic frontline system with intelligent OPFOR forces
-- Advanced logistics and supply network
-- Garrison management system
-- Intel gathering and radio tower control mechanics
-- Automated resource management for OPFOR forces
-- Dynamic vehicle spawning system
-- Customizable faction loadouts and equipment
+Características
+    Sistema de línea de frente dinámica con fuerzas OPFOR inteligentes
+    Red avanzada de logística y suministros
+    Sistema de gestión de guarniciones
+    Mecánicas de recopilación de inteligencia y control de torres de radio
+    Gestión automatizada de recursos para fuerzas OPFOR
+    Sistema dinámico de generación de vehículos
+    Equipamiento y configuraciones de facción personalizables
 
-## Setup Instructions
+Instrucciones de Configuración
+    Configuración Básica de la Misión
+    Descarga los archivos de la misión (ASEGÚRATE DE EXTRAER EL PBO)
+    Colócalos en la carpeta de misiones de Arma 3: Documents/Arma 3 (o Otro Perfil)/missions/
+    Carga la misión en el editor de Arma 3 para personalizar la configuración
 
-### Basic Mission Setup
-1. Download the mission files (MAKE SURE YOU UNPACK THE PBO)
-2. Place in your Arma 3 missions folder: `Documents/Arma 3 (Or Other Profile)/missions/`
-3. Load the mission in the Arma 3 editor to customize settings
 
-### Faction Customization
+Personalización de Facciones
+    Configuración de Fuerzas OPFOR
+    
+Hay dos formas de crear facciones:
 
-#### OPFOR Forces Setup
-- There are two ways to make factions. 
-1. For people using it for individual Unit/Community Usage. I recommend using the files:
-- `CUSTOM_CIVILIAN_FACTION, CUSTOM_FRIENDLY_FACTION, CUSTOM_ENEMY_FACTION`
-2. Create a new faction file in `Scripts/factions/` (e.g., `opf_custom.sqf`) with the following structure. This is useful for people wanting to contribute to the Github by adding new factions that be used by everyone.
+1. Para uso individual o de comunidad:
+
+Se recomienda utilizar los archivos:
+
+    CUSTOM_CIVILIAN_FACTION
+    
+    CUSTOM_FRIENDLY_FACTION
+    
+    CUSTOM_ENEMY_FACTION
+Para contribuciones en GitHub (uso público):
+    Crea un nuevo archivo de facción en Scripts/factions/ (por ejemplo, opf_custom.sqf) con la siguiente estructura:
 
 ```sqf
 // Vehicle Arrays
@@ -55,8 +64,8 @@ East_Units = [
 // ... other arrays
 ```
 
-#### CAS Aircraft Pylon Setup
-To configure CAS aircraft pylons, find the Function called fn_AirSupport.sqf
+Configuración de Pilones de Aeronaves CAS
+Para configurar los pilones de aeronaves CAS, busca la función llamada fn_AirSupport.sqf.
 
 ```sqf
 private _pylonMags = [
@@ -70,8 +79,8 @@ private _pylonMags = [
 ];
 ```
 
-#### Artillery Configuration
-Configure artillery munitions in fn_ArtilleryPrep.sqf
+Configuración de Artillería
+    Configura la munición de artillería en fn_ArtilleryPrep.sqf.
 
 ```sqf
 private _artilleryMagazines = [
@@ -80,157 +89,157 @@ private _artilleryMagazines = [
 ];
 ```
 
-### Map Configuration
+### Configuración del Mapa  
 
-The mission uses both automatic and manual marker placement systems for setting up the battlefield. You have two options:
+La misión utiliza tanto sistemas automáticos como manuales para colocar marcadores en el campo de batalla. Tienes dos opciones:  
 
-#### Option 1: Automatic Marker System
-The mission includes an automatic marker system (`init_Markers.sqf`) that:
-1. Places markers based on map features and objects
-2. Scales marker density based on `EnemyPrec` parameter
-3. Automatically identifies and marks:
-   - Radio Towers (`loc_Transmitter`) near `LocationEvacPoint_F`
-   - Support locations (`o_support`) near factories and military structures
-   - Installations (`o_installation`, `n_installation`) in cities and capitals
-   - Barracks (`loc_Ruin`) near military buildings
-   - Radar sites (`loc_Power`) near radar structures
-   - AA positions (`o_antiair`) on high ground
-   - Infantry positions (`o_inf`) in villages
+#### Opción 1: Sistema de Marcadores Automático  
+La misión incluye un sistema automático de marcadores (`init_Markers.sqf`) que:  
+1. Coloca marcadores basados en características y objetos del mapa.  
+2. Ajusta la densidad de marcadores según el parámetro `EnemyPrec`.  
+3. Identifica y marca automáticamente:  
+   - Torres de Radio (`loc_Transmitter`) cerca de `LocationEvacPoint_F`.  
+   - Ubicaciones de apoyo (`o_support`) cerca de fábricas y estructuras militares.  
+   - Instalaciones (`o_installation`, `n_installation`) en ciudades y capitales.  
+   - Barracones (`loc_Ruin`) cerca de edificios militares.  
+   - Sitios de radar (`loc_Power`) cerca de estructuras de radar.  
+   - Posiciones antiaéreas (`o_antiair`) en terreno elevado.  
+   - Posiciones de infantería (`o_inf`) en aldeas.
 
-Key features of the automatic system:
-- Centers around `LocationEvacPoint_F` objects
-- Uses terrain features like mountains for placement
-- Maintains minimum distances between markers
-- Adjusts marker density based on map size
-- Automatically places military infrastructure
+Características clave del sistema automático:  
+- Se centra en los objetos `LocationEvacPoint_F`.  
+- Utiliza características del terreno, como montañas, para la colocación.  
+- Mantiene distancias mínimas entre los marcadores.  
+- Ajusta la densidad de los marcadores según el tamaño del mapa.  
+- Coloca automáticamente infraestructura militar.
 
-#### Map Conversion Tips
-When converting the mission to a new map:
+#### Consejos para la conversión de mapas
+Al convertir la misión a un nuevo mapa:
 
-#### 1. Adjust Enemy Presence:
-- Default scale is based on map size: `worldSize / 2` (This determines how dense the map will be with objectives besides the Dialog Menu % of Map Playable.)
-- Edit `EnemyPrec` parameter to control overall enemy density (higher values = fewer markers)
+#### 1. Ajustar la presencia enemiga:
+- La escala predeterminada se basa en el tamaño del mapa: `worldSize / 2` (esto determina cuán denso será el mapa con objetivos, además del % de mapa jugable en el Menú de Diálogo).
+- Edita el parámetro `EnemyPrec` para controlar la densidad general de los enemigos (valores más altos = menos marcadores).
 
-#### 2. Infrastructure and Marker System Setup
-The mission uses `init_Markers.sqf` to automatically place strategic objectives based on map features and editor-placed objects.
+#### 2. Configuración de infraestructura y sistema de marcadores
+La misión utiliza `init_Markers.sqf` para colocar automáticamente los objetivos estratégicos basados en las características del mapa y los objetos colocados en el editor.
 
-##### Location Marker Objects
-Place the following objects in the editor to help the marker system create objectives:
+##### Objetos de marcador de ubicación  
+Coloca los siguientes objetos en el editor para ayudar al sistema de marcadores a crear objetivos:
 
-| Object Type | Purpose | Marker Type | Notes |
-|-------------|---------|-------------|-------|
-| `LocationEvacPoint_F` | Core distribution points | Various | Main reference points for all marker generation |
-| `LocationBase_F` | Military bases | `n_support` | Primary military installations |
-| `LocationFOB_F` | Forward Operating Bases | `o_support` | Converted to enemy outposts |
-| `LocationResupplyPoint_F` | Factory/Supply points | `o_support` | Industrial/factory areas |
-| `LocationCamp_F` | Barracks | `loc_Ruin` | Military barracks areas |
-| `LocationCityCapital_F` | Capital cities | `n_installation` | Major urban centers |
-| `LocationCity_F` | Cities | `o_installation` | Urban centers |
-| `LocationVillage_F` | Villages | `o_inf` | Insurgent infantry positions |
+| Tipo de Objetivo               | Propósito                       | Tipo de Marcador  | Notas                                           |
+|---------------------------------|---------------------------------|-------------------|-------------------------------------------------|
+| `LocationEvacPoint_F`           | Puntos Claves de Distribución   | Varios            | Punto de referencia para los demás puntos      |
+| `LocationBase_F`                | Bases Militares                 | `n_support`       | Instalaciones militares principales            |
+| `LocationFOB_F`                 | Bases de Operaciones Avanzadas  | `o_support`       | Cerca de puestos enemigos FOB                  |
+| `LocationResupplyPoint_F`       | Fábricas o Puntos Logísticos    | `o_support`       | Zonas industriales/composiciones del estilo    |
+| `LocationCamp_F`                | Barracones                      | `loc_Ruin`        | Barracones militares/composiciones del estilo  |
+| `LocationCityCapital_F`         | Ciudades Capitales              | `n_installation`  | Grandes centros urbanos                        |
+| `LocationCity_F`                | Ciudades                        | `o_installation`  | Centros urbanos                                |
+| `LocationVillage_F`             | Aldeas Insurgentes              | `o_inf`           | Zonas insurgentes                              |
 
-##### Using Variable Names on Logic Objects
-You can also use Logic objects with specific variable names:
+##### Usando Nombres de Variable
+También puedes usar objetos de Lógica con nombres de variables específicos:
 
-| Variable Name | Creates | Example Use |
-|---------------|---------|-------------|
-| `"RadioTower"` | Radio towers | Place on high terrain |
-| `"ResupplyPoint"` | Supply points | Place in industrial areas |
-| `"FOB"` | Forward bases | Place in strategic locations |
-| `"BaseLocation"` | Military bases | Alternative to LocationBase_F |
-| `"Capital"` | Capital markers | Alternative to LocationCityCapital_F |
-| `"City"` | City markers | Alternative to LocationCity_F |
-| `"Village"` | Village markers | Alternative to LocationVillage_F |
-| `"Barracks"` | Barracks markers | Place near military areas |
-| `"RadarS"` | Radar stations | Place on high terrain |
-| `"AASite"` | Anti-Air positions | Place on mountaintops |
+| Nombre de la variable | Crea | Ejemplo de uso |
+|-----------------------|------|----------------|
+| `"RadioTower"`         | Torres de radio | Colócalas en terrenos elevados |
+| `"ResupplyPoint"`      | Puntos de suministro | Colócalos en áreas industriales |
+| `"FOB"`                | Bases avanzadas | Colócalas en ubicaciones estratégicas |
+| `"BaseLocation"`       | Bases militares | Alternativa a LocationBase_F |
+| `"Capital"`            | Marcadores de capital | Alternativa a LocationCityCapital_F |
+| `"City"`               | Marcadores de ciudad | Alternativa a LocationCity_F |
+| `"Village"`            | Marcadores de pueblo | Alternativa a LocationVillage_F |
+| `"Barracks"`           | Marcadores de cuarteles | Colócalos cerca de áreas militares |
+| `"RadarS"`             | Estaciones de radar | Colócalas en terrenos elevados |
+| `"AASite"`             | Posiciones de defensa aérea | Colócalas en cumbres de montañas |
 
-##### Physical Objects Detection and Variable System
-The script primarily relies on Location objects and variables rather than detecting physical structures. Here's a more accurate explanation of how it works:
+##### Detección de Objetos Físicos y Sistema de Variables  
+El script depende principalmente de los objetos de ubicación y variables en lugar de detectar estructuras físicas. Aquí tienes una explicación más precisa de cómo funciona:
 
-1. **Location Objects**: The script first tries to find specific location type objects like `LocationBase_F`, `LocationCity_F`, etc.
+1. **Objetos de Ubicación**: El script primero intenta encontrar objetos de tipo ubicación específicos como `LocationBase_F`, `LocationCity_F`, etc.
 
-2. **Variable-Tagged Objects**: If location objects aren't found, it looks for objects (often Logic) with specific variable names (e.g., "RadioTower", "FOB")
+2. **Objetos con Etiquetas de Variables**: Si no se encuentran objetos de ubicación, busca objetos (generalmente de Lógica) con nombres de variables específicos (por ejemplo, "RadioTower", "FOB").
 
-3. **Fallback Mechanism**: If neither of these are found, for most marker types it will:
-   - Find a nearby Mount location 
-   - Create a marker there
-   - For radio towers specifically, it will also create a physical tower object
+3. **Mecanismo de Respaldo**: Si no se encuentran ninguno de estos, para la mayoría de los tipos de marcadores hará lo siguiente:
+   - Encontrará una ubicación cercana en una montaña
+   - Creará un marcador allí
+   - Para las torres de radio específicamente, también creará un objeto de torre física.
+  
+El script **no** detecta automáticamente estructuras físicas como edificios de cuarteles o instalaciones de radar por defecto. En su lugar, necesitas:
 
-The script does **not** automatically detect physical structures like barracks buildings or radar installations by default. Instead, you need to:
-- Place the appropriate location objects (`LocationBase_F`, etc.)
-- OR add variables to objects (including Logic objects)
-- OR let the script use its fallback mechanisms (generally placing on mountains)
+- Colocar los objetos de ubicación apropiados (`LocationBase_F`, etc.)
+- O agregar variables a los objetos (incluidos los objetos Lógicos)
+- O dejar que el script utilice sus mecanismos de respaldo (generalmente colocando los marcadores en montañas)
 
-For example, placing a `Land_Radar_F` by itself won't automatically create a radar marker unless you:
-- Add the "RadarS" variable to it, OR
-- Place a `LocationEvacPoint_F` nearby that will use it as a reference point
+Por ejemplo, colocar un `Land_Radar_F` por sí solo no creará automáticamente un marcador de radar, a menos que:
+- Le agregues la variable "RadarS", O
+- Coloque un `LocationEvacPoint_F` cerca que lo utilice como punto de referencia
 
-##### Best Practices for Marker Setup
+##### Mejores prácticas para la configuración de marcadores
 
-1. **Start with LocationEvacPoint_F objects:**
-   - Place these at key strategic points around the map
-   - These act as reference points for placing other markers
-   - Should be distributed evenly, avoid clustering
+1. **Comienza con los objetos `LocationEvacPoint_F`:**
+   - Colócalos en puntos estratégicos clave alrededor del mapa
+   - Actúan como puntos de referencia para colocar otros marcadores
+   - Deben distribuirse de manera uniforme, evita agruparlos.
 
-2. **Add specialized location objects:**
-   - Place `LocationBase_F` at main military installations
-   - Place `LocationCity_F` or `LocationCityCapital_F` at urban centers
-   - Place `LocationFOB_F` at strategic minor military points
-   - Place `LocationCamp_F` for smaller military installations
+2. **Agrega objetos de ubicación especializados:**
+   - Coloca `LocationBase_F` en las principales instalaciones militares.
+   - Coloca `LocationCity_F` o `LocationCityCapital_F` en los centros urbanos.
+   - Coloca `LocationFOB_F` en puntos militares estratégicos menores.
+   - Coloca `LocationCamp_F` para instalaciones militares más pequeñas.
 
-3. **Add physical structures:**
-   - Place radio towers on high terrain
-   - Add military structures to give the map more detail
-   - Use terrain features to your advantage (mountains for AA, etc.)
+3. **Agrega estructuras físicas:**
+   - Coloca torres de radio en terrenos elevados.
+   - Agrega estructuras militares para darle más detalle al mapa.
+   - Usa las características del terreno a tu favor (montañas para AA, etc.).
 
-4. **Fine-tune with Logic markers:**
-   - Use Logic objects with variables to add specific markers
-   - Useful for adding exact positions that don't correspond to physical structures
+4. **Ajusta con marcadores Lógicos:**
+   - Usa objetos Lógicos con variables para agregar marcadores específicos.
+   - Útil para agregar posiciones exactas que no correspondan a estructuras físicas.
 
-5. **Adjust safe positioning for water maps:**
-   - For maps with lots of water, the script uses `BIS_fnc_findSafePos` to ensure markers are on land
-   - The default safe radius is set, but can be adjusted for specific map topography
+5. **Ajusta la posición segura para mapas con agua:**
+   - Para mapas con mucha agua, el script usa `BIS_fnc_findSafePos` para asegurarse de que los marcadores estén en tierra firme.
+   - El radio seguro predeterminado está establecido, pero puede ajustarse según la topografía específica del mapa.
 
-##### Marker Density Control
+##### Control de Densidad de Marcadores
 
-The script automatically scales marker density based on:
-- `EnemyPrec` global parameter (accessible in mission settings)
-- Map size (calculated from `worldSize`)
-- Division factors for each marker type
+El script escala automáticamente la densidad de los marcadores en función de:
+- El parámetro global `EnemyPrec` (accesible en la configuración de la misión)
+- El tamaño del mapa (calculado a partir de `worldSize`)
+- Los factores de división para cada tipo de marcador
 
-For adding more markers of a specific type, you can:
-1. Place more objects of the corresponding type
-2. Adjust the division factor in the script (smaller = more markers)
-3. Reduce the `EnemyPrec` parameter
+Para agregar más marcadores de un tipo específico, puedes:
+1. Colocar más objetos del tipo correspondiente
+2. Ajustar el factor de división en el script (más pequeño = más marcadores)
+3. Reducir el parámetro `EnemyPrec`
 
-##### Troubleshooting Common Issues
+##### Solución de Problemas Comunes
 
-- **No markers appearing**: Ensure you have placed `LocationEvacPoint_F` objects
-- **Markers in water**: Check the `_useSafePos` parameter and increase `_safeRadius`
-- **Too many/few markers**: Adjust `EnemyPrec` or place more/fewer location objects
-- **Missing specific marker types**: Ensure you've placed the corresponding location objects
+- **No aparecen marcadores**: Asegúrate de haber colocado los objetos `LocationEvacPoint_F`
+- **Marcadores en el agua**: Verifica el parámetro `_useSafePos` y aumenta `_safeRadius`
+- **Demasiados/pocos marcadores**: Ajusta `EnemyPrec` o coloca más/menos objetos de ubicación
+- **Faltan tipos específicos de marcadores**: Asegúrate de haber colocado los objetos de ubicación correspondientes
 
-#### 3. Spawn Positions:
-- Spawn Positions will be selected when you first join the mission as the Company Commander. You will be prompted with the Dialog Menu in which you can 
-select Faction, Starting Aggression levels, Starting Civilian Relations, and More.
+#### 3. Posiciones de aparición:
+- Las posiciones de aparición se seleccionarán cuando te unas por primera vez a la misión como Comandante de la Compañía. Se te presentará un Menú de Diálogo en el cual podrás seleccionar Facción, Niveles de agresión inicial, Relaciones iniciales con los civiles y más.
 
-## Customization Tips
+## Consejos de Personalización
 
-### Resource System
-- Adjust OPFOR resource generation in `Functions/Logistics/fn_opforResources.sqf`
+### Sistema de Recursos
+- Ajusta la generación de recursos de OPFOR en `Functions/Logistics/fn_opforResources.sqf`
 
-### Intel System
-- Modify intel decay rates and bonuses in `Functions/Logistics/fn_intelSystem.sqf`
-- Adjust radio tower benefits in the intel system
+### Sistema de Inteligencia
+- Modifica las tasas de descomposición y los bonos de inteligencia en `Functions/Logistics/fn_intelSystem.sqf`
+- Ajusta los beneficios de las torres de radio en el sistema de inteligencia
 
-### Performance Settings
-- Configure view distance in `initServer.sqf`
-- Adjust dynamic spawning ranges in garrison manager
+### Configuración de Rendimiento
+- Configura la distancia de visión en `initServer.sqf`
+- Ajusta los rangos de aparición dinámica en el administrador de guarnición
 
-### Arsenal Customization
-The mission uses a restricted arsenal system (`fn_restrictedArsenal.sqf`) that works with both ACE and vanilla arsenals. It can be disabled & enabled in Lobby Parameters before Mission Start. You can customize available equipment in the following categories:
+### Personalización del Arsenal
+La misión utiliza un sistema de arsenal restringido (`fn_restrictedArsenal.sqf`) que funciona tanto con los arsenales de ACE como con los arsenales básicos. Puede ser desactivado o activado en los Parámetros del Lobby antes de comenzar la misión. Puedes personalizar el equipo disponible en las siguientes categorías:
 
-#### Weapons and Attachments
+#### Armas y Accesorios
 ```sqf
 // Modify these arrays in fn_restrictedArsenal.sqf
 private _rifles = [
@@ -251,7 +260,7 @@ private _attachments = [
 ];
 ```
 
-#### Equipment
+#### Equipamento
 ```sqf
 private _uniforms = [
     "U_B_CombatUniform_mcam",
@@ -274,7 +283,7 @@ private _backpacks = [
 ];
 ```
 
-#### Items and Equipment
+#### Objetos y Equipamento
 ```sqf
 private _medicalItems = [
     "kat_AFAK",
@@ -293,7 +302,7 @@ private _navigationItems = [
 ];
 ```
 
-#### Ammunition and Explosives
+#### Municiones y Explosivos
 ```sqf
 private _magazines = [
     "30Rnd_65x39_caseless_mag",
@@ -307,37 +316,37 @@ private _grenades = [
 ];
 ```
 
-#### Implementation Notes:
-1. The arsenal system automatically:
-   - Works with both ACE and vanilla arsenals
-   - Applies to all arsenal boxes, FOBs, and OPs
-   - Updates dynamically when new FOBs/OPs are created
+#### Notas de Implementación:
+1. El sistema de arsenal automáticamente:
+   - Funciona tanto con los arsenales de ACE como con los arsenales básicos
+   - Se aplica a todas las cajas de arsenal, FOBs y OPs
+   - Se actualiza dinámicamente cuando se crean nuevos FOBs/OPs
 
-2. Mod Compatibility:
-   - Supports ACE items and medical equipment
-   - Compatible with TFAR radio systems
-   - Works with KAT Advanced Medical items
-   - Supports custom mod items (just add their classnames)
+2. Compatibilidad con Mods:
+   - Soporta artículos y equipo médico de ACE
+   - Compatible con sistemas de radio TFAR
+   - Funciona con artículos del sistema médico avanzado KAT
+   - Soporta artículos de mods personalizados (solo agrega sus nombres de clase)
 
-3. To add new items:
-   - Find the appropriate category in `fn_restrictedArsenal.sqf`
-   - Add the classname to the corresponding array
-   - Items will be available in all arsenals automatically
+3. Para agregar nuevos artículos:
+   - Encuentra la categoría correspondiente en `fn_restrictedArsenal.sqf`
+   - Agrega el nombre de clase al array correspondiente
+   - Los artículos estarán disponibles en todos los arsenales automáticamente
 
-4. Performance Optimization:
-   - Arsenal restrictions are applied only once per box
-   - Uses efficient event handlers to manage updates
-   - Prevents duplicate initialization
+4. Optimización de Rendimiento:
+   - Las restricciones del arsenal se aplican solo una vez por caja
+   - Usa controladores de eventos eficientes para gestionar actualizaciones
+   - Previene inicializaciones duplicadas
 
-## Contributing
+## Contribuciones
 
-Feel free to contribute improvements or report issues on our GitHub repository.
+Siéntete libre de contribuir con mejoras o reportar problemas en nuestro repositorio de GitHub.
 
-## License
+## Licencia
 
-This mission is available under the GNU GENERAL PUBLIC LICENSE.
+Esta misión está disponible bajo la GNU GENERAL PUBLIC LICENSE.
 
-## Credits
+## Créditos
 
-- Created by Frontline Operations Development Group
-- Special thanks to the Early Supporters for being there for literal years of support.
+- Creado por el Grupo de Desarrollo de Operaciones en la Primera Línea
+- Agradecimientos especiales a los Primeros Partidarios por estar allí durante años de apoyo.

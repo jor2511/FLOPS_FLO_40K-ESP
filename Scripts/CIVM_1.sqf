@@ -7,7 +7,7 @@ private _nearRoad = selectRandom ( (position player) nearRoads 500 ) ;
 private _mrker = createMarkerLocal [str getpos _nearRoad, getpos _nearRoad]; 
 _mrker setMarkerTypeLocal "hd_warning";
 _mrker setMarkerColorLocal "colorCivilian";
-_mrker setMarkerTextLocal "Repair Vehicle"; 
+_mrker setMarkerTextLocal "Reparar Vehiculo"; 
 _mrker setMarkerSize [0.6, 0.6]; 
 
 sleep 3;
@@ -17,7 +17,7 @@ openMap true;
  
 sleep 5;
 
-["showNotification", ["CIVILIAN MISSION", "Repair Vehicle - Find and Repair the Damaged Vehicle", "info"]] call FLO_fnc_intelSystem;
+["showNotification", ["Mision Civil", "Reparacion de Vehiculo - Encuentra y Repara el Vehiculo", "info"]] call FLO_fnc_intelSystem;
 
 private _V = createVehicle [ selectRandom CivVehArray, getpos _nearRoad, [], 4, "NONE"]; 
 private _nextRoad = ( roadsConnectedTo _nearRoad ) select 0;
@@ -27,11 +27,11 @@ _V setdamage 0.7;
 
 _V addEventHandler ["Killed", {
 
-private _MMarks = allMapMarkers select { markerText _x == "Repair Vehicle"};
+private _MMarks = allMapMarkers select { markerText _x == "Reparar Vehiculo"};
 private _M = [_MMarks,  (_this select 0)] call BIS_fnc_nearestPosition;
 deleteMarker _M ; 
 
-["ScoreAdded", ["Vehicle Destroyed", 00]] call BIS_fnc_showNotification;  
+["ScoreAdded", ["Vehiculo Destruido", 00]] call BIS_fnc_showNotification;  
 
 removeAllActions (_this select 0);
 }];
@@ -47,7 +47,7 @@ removeAllActions (_this select 0);
   {},
   {
 
-  private _MMarks = allMapMarkers select { markerText _x == "Repair Vehicle"};
+  private _MMarks = allMapMarkers select { markerText _x == "Reparar Vehiculo"};
   private _M = [_MMarks,  (_this select 0)] call BIS_fnc_nearestPosition;
   deleteMarker _M ; 
 
@@ -55,7 +55,7 @@ removeAllActions (_this select 0);
 
   [] execVM "Scripts\ReputationPlus.sqf";
 
-  ["ScoreAdded", ["Vehicle Repaired", 00]] call BIS_fnc_showNotification;  
+  ["ScoreAdded", ["Vehiculo Reparado", 00]] call BIS_fnc_showNotification;  
   playMusic "EventTrack01_F_Curator";   
 
   execVM "Scripts\Civ_Relations.sqf";

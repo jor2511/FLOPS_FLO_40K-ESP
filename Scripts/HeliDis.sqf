@@ -1,6 +1,6 @@
 sleep 18;
 
-["showNotification", ["SUPPORT DISABLED", "Enemy Helicopter Support Dismantled For the Next Hour", "success"]] call FLO_fnc_intelSystem;
+["showNotification", ["APOYO DESHABILITADO", "Apoyo de Helicópteros Enemigos Desmantelado Durante la Próxima Hora", "success"]] call FLO_fnc_intelSystem;
 
 HELIDIS = 1;
 publicVariable "HELIDIS";

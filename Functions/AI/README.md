@@ -1,100 +1,100 @@
-# AI Commander and Task Force System
+# Comandante AI y Sistema de Fuerzas de Tarea
 
-## Overview
-This directory contains the AI Commander system and related functions for controlling OPFOR forces in the FLO mission. The system manages task forces, garrison integration, and tactical operations based on the current situation on the battlefield.
+## Visión General
+Este directorio contiene el sistema del Comandante AI y funciones relacionadas para controlar las fuerzas OPFOR en la misión FLO. El sistema gestiona fuerzas de tarea, integración de guarniciones y operaciones tácticas basadas en la situación actual en el campo de batalla.
 
-## Key Components
+## Componentes Clave
 
-### AI Commander (`fn_aiCommander.sqf`)
-The central AI controlling system that:
-- Manages outposts and garrisons
-- Assesses threats and adapts operation modes (ATTACK, DEFEND, SKIRMISH)
-- Deploys task forces for various missions
-- Processes reconnaissance reports
-- Coordinates combined arms operations with infantry and vehicles
+### Comandante AI (`fn_aiCommander.sqf`)
+El sistema central de control AI que:
+- Gestiona puestos avanzados y guarniciones
+- Evalúa amenazas y adapta los modos de operación (ATACAR, DEFENDER, ESCARAMUZA)
+- Despliega fuerzas de tarea para diversas misiones
+- Procesa informes de reconocimiento
+- Coordina operaciones combinadas de infantería y vehículos
 
-### Waypoint Actions (`Actions/`)
-A suite of functions that provide tactical behaviors for groups:
-- `fn_attackArea.sqf`: Assigns attack behaviors based on unit type and available support
-- `fn_defendArea.sqf`: Assigns defense behaviors including garrisoning buildings
-- `fn_patrolArea.sqf`: Creates patrol patterns around a designated area
-- `fn_reconArea.sqf`: Assigns reconnaissance behaviors to gather intelligence
-- `fn_reconAreaAction.sqf`: Handles reporting intelligence back to the AI Commander
+### Acciones de Waypoint (`Actions/`)
+Una suite de funciones que proporciona comportamientos tácticos para los grupos:
+- `fn_attackArea.sqf`: Asigna comportamientos de ataque basados en el tipo de unidad y apoyo disponible
+- `fn_defendArea.sqf`: Asigna comportamientos de defensa, incluyendo guarnicionar edificios
+- `fn_patrolArea.sqf`: Crea patrones de patrullaje alrededor de una área designada
+- `fn_reconArea.sqf`: Asigna comportamientos de reconocimiento para recopilar inteligencia
+- `fn_reconAreaAction.sqf`: Maneja el reporte de inteligencia de vuelta al Comandante AI
 
-### Vehicle Integration
-The system integrates vehicles and infantry in separate groups for maximum control:
-- Vehicles are analyzed using `_evaluateVehicleCapabilities` to determine their optimal roles
-- Each type of vehicle (Tank, APC, MRAP, etc.) receives appropriate tactical behaviors
-- Infantry and vehicle groups are coordinated to work together through linked group references
-- Vehicle groups adapt their behavior based on vehicle type and the infantry they're supporting
-- Vehicle types are pulled dynamically from the `CUSTOM_ENEMY_FACTION.sqf` file arrays:
-  - `East_Ground_Vehicles_Heavy`: Tanks and heavy APCs for anti-armor operations
-  - `East_Ground_Vehicles_Light`: Light APCs, MRAPs, and armed vehicles
-  - `East_Ground_Vehicles_Ambient`: Civilian-type and ambient vehicles
-  - `East_Ground_Transport`: Transport trucks and unarmed vehicles
-  - `East_Air_Transport`, `East_Air_Heli`, `East_Air_Jet`: For air operations
+### Integración de Vehículos
+El sistema integra vehículos e infantería en grupos separados para un control máximo:
+- Los vehículos son analizados usando `_evaluateVehicleCapabilities` para determinar sus roles óptimos
+- Cada tipo de vehículo (Tanque, APC, MRAP, etc.) recibe comportamientos tácticos apropiados
+- Los grupos de infantería y vehículos son coordinados para trabajar juntos a través de referencias de grupo vinculadas
+- Los grupos de vehículos adaptan su comportamiento según el tipo de vehículo y la infantería que apoyan
+- Los tipos de vehículos se extraen dinámicamente de los arrays en el archivo `CUSTOM_ENEMY_FACTION.sqf`:
+  - `East_Ground_Vehicles_Heavy`: Tanques y APCs pesados para operaciones anti-vehículos
+  - `East_Ground_Vehicles_Light`: APCs ligeros, MRAPs y vehículos armados
+  - `East_Ground_Vehicles_Ambient`: Vehículos tipo civil y vehículos ambientales
+  - `East_Ground_Transport`: Camiones de transporte y vehículos no armados
+  - `East_Air_Transport`, `East_Air_Heli`, `East_Air_Jet`: Para operaciones aéreas
 
-### Garrison Integration System (`fn_taskForceGarrisonIntegration.sqf`)
-A comprehensive system that connects task forces with outpost garrisons:
-- Allows task forces to draw units from garrisons via `_pullUnitsFromGarrison`
-- Returns surviving units to garrisons after operations via `_returnUnitsToGarrison`
-- New vehicle management methods:
-  - `_pullVehicleFromGarrison`: Acquires vehicles from garrison or spawns new ones
-  - `_returnVehicleToGarrison`: Returns vehicles to garrisoned outposts
-  - `_addVehicleToGarrison`: Adds new vehicles to outpost garrisons
-- Intelligent selection of vehicle types based on mission needs and enemy composition
+### Sistema de Integración de Guarniciones (`fn_taskForceGarrisonIntegration.sqf`)
+Un sistema integral que conecta las fuerzas de tarea con las guarniciones de los puestos avanzados:
+- Permite a las fuerzas de tarea extraer unidades de las guarniciones mediante `_pullUnitsFromGarrison`
+- Retorna las unidades sobrevivientes a las guarniciones después de las operaciones mediante `_returnUnitsToGarrison`
+- Nuevos métodos de gestión de vehículos:
+  - `_pullVehicleFromGarrison`: Adquiere vehículos de una guarnición o los genera nuevos
+  - `_returnVehicleToGarrison`: Retorna vehículos a los puestos avanzados de guarnición
+  - `_addVehicleToGarrison`: Agrega nuevos vehículos a las guarniciones de los puestos avanzados
+- Selección inteligente de tipos de vehículos basada en las necesidades de la misión y la composición enemiga
 
-### Task Force System
-The task force deployment system now includes:
-- Combined arms operations with infantry and vehicle support
-- Selection of appropriate vehicle types based on mission and enemy composition
-- Coordinated waypoints that ensure vehicles and infantry work together effectively
-- Reporting capabilities for reconnaissance units to provide intelligence back to the commander
+### Sistema de Fuerzas de Tarea
+El sistema de despliegue de fuerzas de tarea ahora incluye:
+- Operaciones de armas combinadas con apoyo de infantería y vehículos
+- Selección de tipos de vehículos apropiados basada en la misión y la composición enemiga
+- Waypoints coordinados que aseguran que los vehículos y la infantería trabajen juntos de manera efectiva
+- Capacidades de reporte para las unidades de reconocimiento para proporcionar inteligencia de vuelta al comandante
 
-## Usage
+## Uso
 
-### Deploying the AI Commander
-The AI Commander is designed to be initialized at mission start:
+### Desplegar el Comandante AI
+El Comandante AI está diseñado para ser inicializado al inicio de la misión:
 
 ```sqf
 private _commander = call FLO_fnc_aiCommander;
 ```
 
-### Working with Task Forces
-Task forces are automatically deployed by the AI Commander, but can also be manually created:
+### Trabajar con las Fuerzas de Tarea
+Las fuerzas de tarea son desplegadas automáticamente por el Comandante AI, pero también se pueden crear manualmente:
 
 ```sqf
-// Example of manually creating a task force with vehicle support
+// Ejemplo de crear manualmente una fuerza de tarea con apoyo de vehículos
 private _infantryGroup = [_position, _side, _infantryUnits] call BIS_fnc_spawnGroup;
 private _vehicleGroup = [_position, _side, _vehicleType] call BIS_fnc_spawnGroup;
 
-// Assign coordinated actions
+// Asignar acciones coordinadas
 [_infantryGroup, _targetPosition, "ATTACK", _vehicleGroup] call FLO_fnc_attackArea;
 [_vehicleGroup, _targetPosition, "ATTACK", _infantryGroup] call FLO_fnc_attackArea;
 ```
 
-### Working with Garrison Vehicles
-The garrison integration system provides methods for vehicle management:
+### Trabajar con Vehículos de Guarnición
+El sistema de integración de guarniciones proporciona métodos para la gestión de vehículos:
 
 ```sqf
-// Initialize the garrison integration system
+// Inicializar el sistema de integración de guarniciones
 FLO_TaskForce_Garrison_Integration = call FLO_fnc_taskForceGarrisonIntegration;
 
-// Add vehicles to a garrison
+// Agregar vehículos a una guarnición
 FLO_TaskForce_Garrison_Integration call ["_addVehicleToGarrison", ["marker_outpost_1", "I_MRAP_03_hmg_F", 2]];
 
-// Pull a vehicle for a task force
+// Extraer un vehículo para una fuerza de tarea
 private _vehicle = FLO_TaskForce_Garrison_Integration call ["_pullVehicleFromGarrison", ["marker_outpost_1", ["MRAP", "Car"], ["I_MRAP_03_hmg_F"], "TF_123"]];
 
-// Return a vehicle to a garrison
+// Retornar un vehículo a una guarnición
 FLO_TaskForce_Garrison_Integration call ["_returnVehicleToGarrison", [_vehicle, "marker_outpost_1"]];
 ```
 
-### Customizing Vehicle Selection
-The system uses the vehicle arrays from `CUSTOM_ENEMY_FACTION.sqf` to select appropriate vehicles:
+### Personalizar la Selección de Vehículos
+El sistema utiliza los arrays de vehículos del archivo `CUSTOM_ENEMY_FACTION.sqf` para seleccionar los vehículos apropiados:
 
 ```sqf
-// Example of manually selecting a vehicle type based on operation needs
+// Ejemplo de seleccionar manualmente un tipo de vehículo basado en las necesidades de la operación
 private _vehicleType = "";
 if (_needAntiArmor) then {
     _vehicleType = selectRandom East_Ground_Vehicles_Heavy;
@@ -107,9 +107,9 @@ if (_needAntiArmor) then {
 };
 ```
 
-## Development Notes
-- Vehicle capabilities analysis based on AI ammo usage flags from configs
-- Formation and speed settings are tailored to each vehicle type
-- Waypoints use appropriate tactical positioning for each unit type
-- Stealth vs. combat operations handled differently for different unit compositions
-- The system automatically adapts to whatever vehicles are defined in the faction file 
+## Notas de Desarrollo
+- Análisis de capacidades de vehículos basado en las banderas de uso de munición de la AI desde los archivos de configuración
+- Los ajustes de formación y velocidad están adaptados a cada tipo de vehículo
+- Los waypoints utilizan posicionamiento táctico apropiado para cada tipo de unidad
+- Las operaciones de sigilo vs. combate se manejan de manera diferente para diferentes composiciones de unidades
+- El sistema se adapta automáticamente a los vehículos definidos en el archivo de facción

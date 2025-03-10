@@ -28,7 +28,7 @@ CreatedVEH allowDammage false ;
 
 
 Ind01 = [ CreatedVEH,
-"<t color='#FF0000'>CANCEL</t>",
+"<t color='#FF0000'>CANCELAR</t>",
 'Screens\FOBA\iconRepairAt_ca.paa',
 'Screens\FOBA\iconRepairAt_ca.paa',
 'true',       
@@ -95,8 +95,8 @@ false
 ] call BIS_fnc_holdActionAdd; 
 
 
-}else{hint "Not enough Resources";};
+}else{hint "Sin Recursos";};
 
-}else{  hint "You are not authorized for this Request Soldier!"; };
+}else{  hint "Sin Autorizacion"; };
 
 	closeDialog 0;

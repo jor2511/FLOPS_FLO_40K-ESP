@@ -1,6 +1,6 @@
 sleep 8;
 
-["showNotification", ["AGGRESSION", "Decreased - - -", "warning"]] call FLO_fnc_intelSystem;
+["showNotification", ["AGRESION", "Disminuido - - -", "warning"]] call FLO_fnc_intelSystem;
 
 _mrkrs = allMapMarkers select {markerColor _x == "Color6_FD_F"};
 _mrkr = _mrkrs select 0;

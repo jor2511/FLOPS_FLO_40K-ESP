@@ -18,7 +18,7 @@ if (_Chance < 5) then {
 								_x setMarkerAlpha 1;
 
 								sleep 1;
-								["showNotification", ["+ NEW INTEL", "Military Intel Received", "intel"]] call FLO_fnc_intelSystem;
+								["showNotification", ["+ NUEVO INTEL", "Intel Militar Recibido", "intel"]] call FLO_fnc_intelSystem;
 									_attackingAtGrid = mapGridPosition getMarkerPos _x;
 								[[west,"HQ"], "Enemy Presence Confirmed at grid " + _attackingAtGrid] remoteExec ["sideChat", 0];
 } ;
@@ -28,7 +28,7 @@ if (_Chance == 5) then {
 		GNRT = "YES" ;
 		DVRT = "NO" ;
 		0 = [] spawn {
-			  _result = ["Intel Show the Location of an Enemy Stationary Warship in the Open Seas, It can be Infiltrated and Secured,  (Optional Mission : Secure Enemy Battle ship)", "", DVRT, GNRT,nil, false, false] call BIS_fnc_guiMessage;
+			  _result = ["El intel muestra la ubicación de un barco de guerra enemigo estacionario en alta mar, puede ser infiltrado y asegurado. (Misión opcional: Asegurar el barco de guerra enemigo)", "", DVRT, GNRT,nil, false, false] call BIS_fnc_guiMessage;
 
 						if (_result) then {
 							
@@ -37,9 +37,9 @@ if (_Chance == 5) then {
 								_x setMarkerAlpha 1;
 
 								sleep 1;
-								["showNotification", ["+ NEW INTEL", "Military Intel Received", "intel"]] call FLO_fnc_intelSystem;
+								["showNotification", ["+ NUEVO INTEL", "Intel Militar Recibido", "intel"]] call FLO_fnc_intelSystem;
 									_attackingAtGrid = mapGridPosition getMarkerPos _x;
-								[[west,"HQ"], "Enemy Presence Confirmed at grid " + _attackingAtGrid] remoteExec ["sideChat", 0];
+								[[west,"HQ"], "Presencia Enemiga Confirmada " + _attackingAtGrid] remoteExec ["sideChat", 0];
 
 						} ;
 
@@ -66,9 +66,9 @@ if (_Chance == 5) then {
 								", ""];
 								
 								sleep 1;
-								["showNotification", ["+ NEW INTEL", "Military Intel Received", "intel"]] call FLO_fnc_intelSystem;
+								["showNotification", ["+ NUEVO INTEL", "Intel Militar Recibido", "intel"]] call FLO_fnc_intelSystem;
 									_attackingAtGrid = mapGridPosition getMarkerPos _mrkr;
-								[[west,"HQ"], "Enemy Presence Confirmed at grid " + _attackingAtGrid] remoteExec ["sideChat", 0];
+								[[west,"HQ"], "Presencia Enemiga Confirmada " + _attackingAtGrid] remoteExec ["sideChat", 0];
 
 						  };
 		};
@@ -80,7 +80,7 @@ if (_Chance == 6) then {
 		GNRT = "YES" ;
 		DVRT = "NO" ;
 		0 = [] spawn {
-			  _result = ["Intel is about a Friendly Aircraft CrashSite, We can Track them Down and Rescue the Pilot and Destroy the Wreck,  (Optional Mission : Rescue Captured Pilot)", "", DVRT, GNRT,nil, false, false] call BIS_fnc_guiMessage;
+			  _result = ["El intel es sobre el lugar de un accidente aéreo amistoso, podemos rastrearlo y rescatar al piloto, además de destruir los restos. (Misión opcional: Rescatar al piloto capturado)", "", DVRT, GNRT,nil, false, false] call BIS_fnc_guiMessage;
 
 						if (_result) then {
 							
@@ -89,9 +89,9 @@ if (_Chance == 6) then {
 								_x setMarkerAlpha 1;
 
 								sleep 1;
-								["showNotification", ["+ NEW INTEL", "Military Intel Received", "intel"]] call FLO_fnc_intelSystem;
+								["showNotification", ["+ NUEVO INTEL", "Intel Militar Recibido", "intel"]] call FLO_fnc_intelSystem;
 									_attackingAtGrid = mapGridPosition getMarkerPos _x;
-								[[west,"HQ"], "Enemy Presence Confirmed at grid " + _attackingAtGrid] remoteExec ["sideChat", 0];
+								[[west,"HQ"], "Presencia Enemiga Confirmada " + _attackingAtGrid] remoteExec ["sideChat", 0];
 
 						} ;
 
@@ -132,7 +132,7 @@ if (_Chance == 6) then {
 								", ""];
 								
 								sleep 1;
-								["showNotification", ["+ NEW INTEL", "Military Intel Received", "intel"]] call FLO_fnc_intelSystem;
+								["showNotification", ["+ NUEVO INTEL", "Intel Militar Recibido", "intel"]] call FLO_fnc_intelSystem;
 									_attackingAtGrid = mapGridPosition getMarkerPos _mrkr;
 								[[west,"HQ"], "Enemy Presence Confirmed at grid " + _attackingAtGrid] remoteExec ["sideChat", 0];
 
@@ -145,7 +145,7 @@ if (_Chance == 7) then {
 		GNRT = "YES" ;
 		DVRT = "NO" ;
 		0 = [] spawn {
-			  _result = ["Intel Suggest the whereabouts of the Friendly Squad we Lost Contact with Earlier, We can Track them down and Rescue Them,  (Optional Mission : Rescue Missing Squad)", "", DVRT, GNRT,nil, false, false] call BIS_fnc_guiMessage;
+			  _result = ["El intel sugiere la ubicación del escuadrón amigo con el que perdimos contacto anteriormente, podemos rastrearlos y rescatarlos. (Misión opcional: Rescatar escuadrón desaparecido)", "", DVRT, GNRT,nil, false, false] call BIS_fnc_guiMessage;
 
 						if (_result) then {
 							
@@ -154,9 +154,9 @@ if (_Chance == 7) then {
 									_x setMarkerAlpha 1;
 
 								sleep 1;
-								["showNotification", ["+ NEW INTEL", "Military Intel Received", "intel"]] call FLO_fnc_intelSystem;
+								["showNotification", ["+ NUEVO INTEL", "Intel Militar Recibido", "intel"]] call FLO_fnc_intelSystem;
 									_attackingAtGrid = mapGridPosition getMarkerPos _x;
-								[[west,"HQ"], "Enemy Presence Confirmed at grid " + _attackingAtGrid] remoteExec ["sideChat", 0];
+								[[west,"HQ"], "Presencia Enemiga Confirmada " + _attackingAtGrid] remoteExec ["sideChat", 0];
 
 						} ;
 
@@ -200,7 +200,7 @@ if (_Chance == 7) then {
 								sleep 1;
 								["showNotification", ["+ NEW INTEL", "Military Intel Received", "intel"]] call FLO_fnc_intelSystem;
 									_attackingAtGrid = mapGridPosition getMarkerPos _mrkr;
-								[[west,"HQ"], "Enemy Presence Confirmed at grid " + _attackingAtGrid] remoteExec ["sideChat", 0];
+								[[west,"HQ"], "Presencia Enemiga Confirmada " + _attackingAtGrid] remoteExec ["sideChat", 0];
 
 						  };
 		};
@@ -211,7 +211,7 @@ if (_Chance == 8) then {
 		GNRT = "YES" ;
 		DVRT = "NO" ;
 		0 = [] spawn {
-			  _result = ["Intel Suggests Enemy Support Convoy will be Launched toward Frontlines, We can Intercept the Convoy and Dismantle their Reinforcements and Support operation,  (Optional Mission : Destroy Enemy Convoy)", "", DVRT, GNRT,nil, false, false] call BIS_fnc_guiMessage;
+			  _result = ["El intel sugiere que un convoy de apoyo enemigo será enviado hacia las líneas del frente, podemos interceptar el convoy y desmantelar sus refuerzos y operación de apoyo. (Misión opcional: Destruir convoy enemigo)", "", DVRT, GNRT,nil, false, false] call BIS_fnc_guiMessage;
 
 
 						if (_result) then {
@@ -221,9 +221,9 @@ if (_Chance == 8) then {
 							_x setMarkerAlpha 1;
 
 								sleep 1;
-								["showNotification", ["+ NEW INTEL", "Military Intel Received", "intel"]] call FLO_fnc_intelSystem;
+								["showNotification", ["+ NUEVO INTEL", "Intel Militar Recibido", "intel"]] call FLO_fnc_intelSystem;
 									_attackingAtGrid = mapGridPosition getMarkerPos _x;
-								[[west,"HQ"], "Enemy Presence Confirmed at grid " + _attackingAtGrid] remoteExec ["sideChat", 0];
+								[[west,"HQ"], "Presencia Enemiga Confirmada " + _attackingAtGrid] remoteExec ["sideChat", 0];
 
 						} ;
 
