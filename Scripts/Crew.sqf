@@ -18,7 +18,7 @@ _mrkr setMarkerText str _NewMoney;
     }   
 ] remoteExecCall ["call", 2];
 
-titleText ["Combat Crew Dispatching . . .", "BLACK IN",9999];
+titleText ["Patrulla Enemiga Avisada . . .", "BLACK IN",9999];
 
 sleep 1;
 _nearVehs = nearestObjects [Player,["Air","Ship","LandVehicle"],20] select 0; 
@@ -39,7 +39,7 @@ _selection=[];
 _selection append (allGroups select {side _x == west}); 
 {player hcSetGroup [_x]} foreach _selection;
 
-titleText ["Combat Crew Dispatching . . .", "BLACK IN",1];
+titleText ["Patrulla Enemiga Avisada . . .", "BLACK IN",1];
 
 }else{hint "Not Enough Recources";};
 
