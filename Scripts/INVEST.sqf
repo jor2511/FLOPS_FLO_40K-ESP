@@ -6,7 +6,7 @@ _Civl = _this select 0 ;
 _ChanceN = selectRandom [1, 2, 3]; 
 
 		if ((_Civl getUnitTrait "engineer" == true) && (_ChanceN > 1)) then {	
-_complMessage = selectRandom ["DEATH TO OUTSIDERS, DEATH TO OUTSIDERS !!!", "Walk Away Bastards. . .You Just Bring Chaos and Destruction !!!","You will Pay for what you have done to our Country, I dont tell you shit !!!","May GOD Save us from Your Wicked chains you Devils, May GOD Dawn you all !!!","Your Men Caused my Innocent brothers and sisters Suffer and Die, FUCK YOU ALL !!!"];
+_complMessage = selectRandom ["¡MUERTE A LOS FORASTEROS, MUERTE A LOS FORASTEROS!!!", "Lárguense, bastardos... ¡Solo traen caos y destrucción!", "¡Pagarán por lo que han hecho a nuestro país, no les diré una mierda!", "¡Que DIOS nos salve de sus malvadas cadenas, demonios! ¡Que DIOS los condene a todos!", "¡Sus hombres hicieron sufrir y morir a mis hermanos y hermanas inocentes, ¡QUE SE JODAN TODOS!!!"];
 ["Civilian", _complMessage] remoteExec ["BIS_fnc_showSubtitle"];
 
 		}else{
@@ -27,12 +27,12 @@ _complMessage = selectRandom ["DEATH TO OUTSIDERS, DEATH TO OUTSIDERS !!!", "Wal
 
 
 											execVM "Scripts\INTL_Civ.sqf";
-											_complMessage = selectRandom ["Sure, Let me Show you the way!","We appericiate your Efforts for our Homeland, let me Help you!","Yes, Come, I know Some !"];
+											_complMessage = selectRandom ["¡Claro, déjame mostrarte el camino!", "Agradecemos tus esfuerzos por nuestra patria, ¡déjame ayudarte!", "¡Sí, ven, conozco algunos!"];
 											["Civilian", _complMessage] remoteExec ["BIS_fnc_showSubtitle"];
 											}else{hint "Not enough Resources"; };
 											} else {
 												
-											_complMessage = selectRandom ["We Dont talk to Strangers!","I don't know much about this Region!","Sorry but I dont Trust you Outsiders!","Maybe that Man there can Help you, He has been with the Army years ago !"];
+											_complMessage = selectRandom ["¡No hablamos con extraños!", "No sé mucho sobre esta región.", "Lo siento, pero no confío en ustedes forasteros.", "¡Tal vez ese hombre allá pueda ayudarte, estuvo en el ejército hace años!"];
 											["Civilian", _complMessage] remoteExec ["BIS_fnc_showSubtitle"];
 											};
 
@@ -52,12 +52,12 @@ _complMessage = selectRandom ["DEATH TO OUTSIDERS, DEATH TO OUTSIDERS !!!", "Wal
 
 												
 											execVM "Scripts\INTL_Civ.sqf";
-											_complMessage = selectRandom ["Sure, Let me Show you the way!","We appericiate your Efforts for our Homeland, let me Help you!","Yes, Come, I know Some !"];
+											_complMessage = selectRandom ["¡Claro, déjame mostrarte el camino!", "Agradecemos tus esfuerzos por nuestra patria, ¡déjame ayudarte!", "¡Sí, ven, conozco algunos!"];
 											["Civilian", _complMessage] remoteExec ["BIS_fnc_showSubtitle"];
 											}else{hint "Not enough Resources"; };
 											} else {
 												
-											_complMessage = selectRandom ["We Dont talk to Strangers!","I don't know much about this Region!","Sorry but I dont Trust you Outsiders!","Maybe that Man there can Help you, He has been with the Army years ago !"];
+											_complMessage = selectRandom ["¡No hablamos con extraños!", "No sé mucho sobre esta región.", "Lo siento, pero no confío en ustedes forasteros.", "¡Tal vez ese hombre allá pueda ayudarte, estuvo en el ejército hace años!"];
 											["Civilian", _complMessage] remoteExec ["BIS_fnc_showSubtitle"];
 											};
 
