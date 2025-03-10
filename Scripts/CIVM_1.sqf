@@ -17,7 +17,7 @@ openMap true;
  
 sleep 5;
 
-["showNotification", ["Mission Civil", "Reparación de Vehiculo - Encuentra y Repara el Vehiculo", "info"]] call FLO_fnc_intelSystem;
+["showNotification", ["Mision Civil", "Reparacion de Vehiculo - Encuentra y Repara el Vehiculo", "info"]] call FLO_fnc_intelSystem;
 
 private _V = createVehicle [ selectRandom CivVehArray, getpos _nearRoad, [], 4, "NONE"]; 
 private _nextRoad = ( roadsConnectedTo _nearRoad ) select 0;
