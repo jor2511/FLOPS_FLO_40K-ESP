@@ -162,13 +162,20 @@ if (_aggressionScore > 10) then {
 [_targetPos, getMarkerPos _sourceOpforMarker, _pattern, _aggressionScore] call FLO_fnc_executeAttackPattern;
 
 // Calculate force size based on aggression
-private _forceSize = switch (true) do {
-    case (_aggressionScore >= 15): { 20 };  // Maximum aggression - Full Brigade Attack
-    case (_aggressionScore >= 12): { 14 };   // Very high aggression - BTG Attack
-    case (_aggressionScore >= 9): { 12 };    // High aggression - Reinforced Company Attack
-    case (_aggressionScore >= 6): { 8 };    // Medium aggression - Company Attack
-    case (_aggressionScore >= 3): { 4 };    // Low aggression - Reinforced Platoon Attack
-    default { 2 };                          // Minimal aggression - Platoon Attack
+case (_aggressionScore >= 15): { 48 };  // Maximum aggression - Full Brigade Attack
+     case (_aggressionScore >= 12): { 28 };   // Very high aggression - BTG Attack
+     case (_aggressionScore >= 9): { 20 };    // High aggression - Reinforced Company Attack
+     case (_aggressionScore >= 6): { 14 };    // Medium aggression - Company Attack
+     case (_aggressionScore >= 3): { 9 };    // Low aggression - Reinforced Platoon Attack
+     default { 6 };                          // Minimal aggression - Platoon Attack
+
+//private _forceSize = switch (true) do {
+   // case (_aggressionScore >= 15): { 20 };  // Maximum aggression - Full Brigade Attack
+  //  case (_aggressionScore >= 12): { 14 };   // Very high aggression - BTG Attack
+  //  case (_aggressionScore >= 9): { 12 };    // High aggression - Reinforced Company Attack
+  //  case (_aggressionScore >= 6): { 8 };    // Medium aggression - Company Attack
+  //  case (_aggressionScore >= 3): { 4 };    // Low aggression - Reinforced Platoon Attack
+  //  default { 2 };                          // Minimal aggression - Platoon Attack
 };
 
 // Helper function for vehicle and crew creation
