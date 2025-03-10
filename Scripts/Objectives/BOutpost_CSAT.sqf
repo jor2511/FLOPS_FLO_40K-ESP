@@ -23,7 +23,7 @@ _V setDir _dir;
 sleep 3;
 
 _V addEventHandler ["Killed", {  
-["ScoreAdded", ["Enemy Aircraft Sabotaged", 20]] remoteExec ["BIS_fnc_showNotification", 0];
+["ScoreAdded", ["Objetivo aereo saboteado", 20]] remoteExec ["BIS_fnc_showNotification", 0];
 [20] call FLO_fnc_addReward;
  playMusic "EventTrack01_F_Curator"; 
  execVM 'Scripts\HeliDis.sqf';
