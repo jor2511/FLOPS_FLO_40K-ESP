@@ -1,7 +1,7 @@
-hint "Select Mission Type" ; 
+hint "Selecciona la mision" ; 
 
 CS_Action = [ player,
-"<img size=2 color='#7CC2FF' image='\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa'/><t color='#7CC2FF'>Mission : Rescue Crashed Pilot</t>",
+"<img size=2 color='#7CC2FF' image='\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa'/><t color='#7CC2FF'>Mision: Rescatar Piloto</t>",
 '\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa',
 '\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa',
 'true',       
@@ -26,7 +26,7 @@ false
 ] call BIS_fnc_holdActionAdd; 
 
 MS_Action = [ player,
-"<img size=2 color='#7CC2FF' image='\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa'/><t color='#7CC2FF'>Mission : Rescue Missing Squad</t>",
+"<img size=2 color='#7CC2FF' image='\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa'/><t color='#7CC2FF'>Mision: Rescatar combatientes desaparecidos</t>",
 '\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa',
 '\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa',
 'true',       
@@ -49,7 +49,7 @@ false
 ] call BIS_fnc_holdActionAdd; 
 
 SC_Action = [ player,
-"<img size=2 color='#7CC2FF' image='\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa'/><t color='#7CC2FF'>Mission : Intercept Support Convoy</t>",
+"<img size=2 color='#7CC2FF' image='\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa'/><t color='#7CC2FF'>Mision: Interceptar convoys</t>",
 '\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa',
 '\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa',
 'true',       
@@ -72,7 +72,7 @@ false
 ] call BIS_fnc_holdActionAdd; 
 
 BS_Action = [ player,
-"<img size=2 color='#7CC2FF' image='\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa'/><t color='#7CC2FF'>Mission : Infiltrate Battle Ship</t>",
+"<img size=2 color='#7CC2FF' image='\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa'/><t color='#7CC2FF'>Mision: Infiltracion en barco</t>",
 '\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa',
 '\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa',
 'true',       
