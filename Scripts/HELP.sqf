@@ -3,7 +3,7 @@ _Civl = _this select 0 ;
 _ChanceN = selectRandom [1, 2, 3]; 
 
 if ((_Civl getUnitTrait "engineer" == true) && (_ChanceN > 1)) then {	
-_complMessage = selectRandom ["We Don't Need Your Help Outsider, Move away, GOD Dawn you ALL !!!", "Wanna Help ? make  alive My little Brother that you Killed, Fuck off you Bastard, GOD kill you ALL !!!","You will Pay for what you have done to our Country, I dont tell you shit !!!","We Dont need your Help, JUST FUCK OFF !!!","Your Men Caused my Innocent brothers and sisters Suffer and Die, Fuck you, FUCK YOU ALL !!!"];
+_complMessage = selectRandom ["No necesitamos tu ayuda forastero, aléjate, ¡Dios maldiga a todos ustedes!", "¿Quieres ayudar? Haz vivo a mi hermanito que mataste, vete a la mierda, ¡Dios los matará a todos!", "Pagarán por lo que le hicieron a nuestro país, ¡No te voy a decir nada!", "¡No necesitamos tu ayuda, SOLO LÁRGATE!", "Tus hombres hicieron que mis hermanos y hermanas inocentes sufrieran y murieran, ¡Jódete, JÓDETE A TI Y A TODOS USTEDES!"];
 ["Civilian", _complMessage] remoteExec ["BIS_fnc_showSubtitle"];
 
 		}else{
@@ -13,26 +13,26 @@ _complMessage = selectRandom ["We Don't Need Your Help Outsider, Move away, GOD 
 				if (_Chance == 1) then {
 					
 							execVM "Scripts\CIVM_1.sqf";
-							["Civilian", "Ive heard some of you are Engineers, One of Locals Troubled his Vehicle somewhere Along the Road, Think You can Help?"] remoteExec ["BIS_fnc_showSubtitle", 0];
-							};
+							["Civilian", "He oído que algunos de ustedes son ingenieros. Uno de los locales ha tenido problemas con su vehículo en algún lugar de la carretera. ¿Creen que pueden ayudar?"] remoteExec ["BIS_fnc_showSubtitle", 0];
+							};				
 
 				if (_Chance == 2) then {
 					
 							execVM "Scripts\CIVM_2.sqf";
-							["Civilian", "This Neighborhood Runs low on Supplies and the IDAP does not Accept the Risk, Can your Guys help them?"] remoteExec ["BIS_fnc_showSubtitle", 0];
+							["Civilian", "Este vecindario se queda sin suministros y la IDAP no acepta el riesgo. ¿Pueden ayudar a la gente de aquí?"] remoteExec ["BIS_fnc_showSubtitle", 0];
 							};
 
 				if (_Chance == 3) then {
 					
 							execVM "Scripts\CIVM_3.sqf";
-							["Civilian", "our Neighbors Found a Minefield the hard way near this Area, Can Your Engineers take a look at it ?"] remoteExec ["BIS_fnc_showSubtitle", 0];
+							["Civilian", "Nuestros vecinos encontraron un campo minado de la manera más difícil cerca de esta zona. ¿Pueden sus ingenieros echar un vistazo?"] remoteExec ["BIS_fnc_showSubtitle", 0];
 							};
 
 
 				if (_Chance == 4) then {
 								
 							[_Civl] execVM "Scripts\CIVM_4.sqf";
-							["Civilian", "I know you were Looking for Insurgents, They have been seen along these roads few nights, Can you Create Checkpoints ?"] remoteExec ["BIS_fnc_showSubtitle", 0];
+							["Civilian", "Sabemos que estaban buscando insurgentes, se les ha visto por estos caminos algunas noches. ¿Pueden crear puestos de control?"] remoteExec ["BIS_fnc_showSubtitle", 0];
 							};
 
 };
