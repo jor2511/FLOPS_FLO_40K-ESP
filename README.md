@@ -2,13 +2,13 @@
 
 **Versión Actual**: 1.6
 
-A dinamico frontline operations mission for Arma 3 that creates an evolving battlefield with intelligent OPFOR forces, logistics systems, and garrison management.
+Una dinámica misión de operaciones en primera línea para Arma 3 que crea un campo de batalla en evolución con fuerzas OPFOR inteligentes, sistemas logísticos y gestión de guarniciones.
 
 Características
     Sistema de línea de frente dinámica con fuerzas OPFOR inteligentes
     Red avanzada de logística y suministros
     Sistema de gestión de guarniciones
-    Mecánicas de recopilación de inteligencia y control de torres de radio
+    Mecánicas de recopilación de inteligencia y control de torres de voco
     Gestión automatizada de recursos para fuerzas OPFOR
     Sistema dinámico de generación de vehículos
     Equipamiento y configuraciones de facción personalizables
@@ -64,8 +64,8 @@ East_Units = [
 // ... other arrays
 ```
 
-Configuración de Pilones de Aeronaves CAS
-Para configurar los pilones de aeronaves CAS, busca la función llamada fn_AirSupport.sqf.
+Configuración de Pilones de Aeronaves AAC
+Para configurar los pilones de aeronaves AAC, busca la función llamada fn_AirSupport.sqf.
 
 ```sqf
 private _pylonMags = [
@@ -98,11 +98,11 @@ La misión incluye un sistema automático de marcadores (`init_Markers.sqf`) que
 1. Coloca marcadores basados en características y objetos del mapa.  
 2. Ajusta la densidad de marcadores según el parámetro `EnemyPrec`.  
 3. Identifica y marca automáticamente:  
-   - Torres de Radio (`loc_Transmitter`) cerca de `LocationEvacPoint_F`.  
+   - Torres de Vox (`loc_Transmitter`) cerca de `LocationEvacPoint_F`.  
    - Ubicaciones de apoyo (`o_support`) cerca de fábricas y estructuras militares.  
    - Instalaciones (`o_installation`, `n_installation`) en ciudades y capitales.  
    - Barracones (`loc_Ruin`) cerca de edificios militares.  
-   - Sitios de radar (`loc_Power`) cerca de estructuras de radar.  
+   - Sitios de Auspex (`loc_Power`) cerca de estructuras de auspex.  
    - Posiciones antiaéreas (`o_antiair`) en terreno elevado.  
    - Posiciones de infantería (`o_inf`) en aldeas.
 
@@ -127,31 +127,31 @@ La misión utiliza `init_Markers.sqf` para colocar automáticamente los objetivo
 Coloca los siguientes objetos en el editor para ayudar al sistema de marcadores a crear objetivos:
 
 | Tipo de Objetivo               | Propósito                       | Tipo de Marcador  | Notas                                           |
-|---------------------------------|---------------------------------|-------------------|-------------------------------------------------|
-| `LocationEvacPoint_F`           | Puntos Claves de Distribución   | Varios            | Punto de referencia para los demás puntos      |
-| `LocationBase_F`                | Bases Militares                 | `n_support`       | Instalaciones militares principales            |
-| `LocationFOB_F`                 | Bases de Operaciones Avanzadas  | `o_support`       | Cerca de puestos enemigos FOB                  |
-| `LocationResupplyPoint_F`       | Fábricas o Puntos Logísticos    | `o_support`       | Zonas industriales/composiciones del estilo    |
-| `LocationCamp_F`                | Barracones                      | `loc_Ruin`        | Barracones militares/composiciones del estilo  |
-| `LocationCityCapital_F`         | Ciudades Capitales              | `n_installation`  | Grandes centros urbanos                        |
-| `LocationCity_F`                | Ciudades                        | `o_installation`  | Centros urbanos                                |
-| `LocationVillage_F`             | Aldeas Insurgentes              | `o_inf`           | Zonas insurgentes                              |
+|--------------------------------|---------------------------------|-------------------|-------------------------------------------------|
+| `LocationEvacPoint_F`          | Puntos Claves de Distribución   | Varios            | Punto de referencia para los demás puntos       |
+| `LocationBase_F`               | Bases Militares                 | `n_support`       | Instalaciones militares principales             |
+| `LocationFOB_F`                | Bases de Operaciones Avanzadas  | `o_support`       | Cerca de puestos enemigos FOB                   |
+| `LocationResupplyPoint_F`      | Fábricas o Puntos Logísticos    | `o_support`       | Zonas industriales/composiciones del estilo     |
+| `LocationCamp_F`               | Barracones                      | `loc_Ruin`        | Barracones militares/composiciones del estilo   |
+| `LocationCityCapital_F`        | Ciudades Capitales              | `n_installation`  | Grandes centros urbanos                         |
+| `LocationCity_F`               | Ciudades                        | `o_installation`  | Centros urbanos                                 |
+| `LocationVillage_F`            | Aldeas                          | `o_inf`           | Posiciones de infantería insurgente             |
 
 ##### Usando Nombres de Variable
 También puedes usar objetos de Lógica con nombres de variables específicos:
 
-| Nombre de la variable | Crea | Ejemplo de uso |
-|-----------------------|------|----------------|
-| `"RadioTower"`         | Torres de radio | Colócalas en terrenos elevados |
-| `"ResupplyPoint"`      | Puntos de suministro | Colócalos en áreas industriales |
-| `"FOB"`                | Bases avanzadas | Colócalas en ubicaciones estratégicas |
-| `"BaseLocation"`       | Bases militares | Alternativa a LocationBase_F |
-| `"Capital"`            | Marcadores de capital | Alternativa a LocationCityCapital_F |
-| `"City"`               | Marcadores de ciudad | Alternativa a LocationCity_F |
-| `"Village"`            | Marcadores de pueblo | Alternativa a LocationVillage_F |
-| `"Barracks"`           | Marcadores de cuarteles | Colócalos cerca de áreas militares |
-| `"RadarS"`             | Estaciones de radar | Colócalas en terrenos elevados |
-| `"AASite"`             | Posiciones de defensa aérea | Colócalas en cumbres de montañas |
+| Nombre de la variable | Crea                        | Ejemplo de uso                        |
+|-----------------------|-----------------------------|---------------------------------------|
+| `"RadioTower"`        | Torres de voco              | Colócalas en terrenos elevados        |
+| `"ResupplyPoint"`     | Puntos de suministro        | Colócalos en áreas industriales       |
+| `"FOB"`               | Bases avanzadas             | Colócalas en ubicaciones estratégicas |
+| `"BaseLocation"`      | Bases militares             | Alternativa a LocationBase_F          |
+| `"Capital"`           | Marcadores de capital       | Alternativa a LocationCityCapital_F   |
+| `"City"`              | Marcadores de ciudad        | Alternativa a LocationCity_F          |
+| `"Village"`           | Marcadores de pueblo        | Alternativa a LocationVillage_F       |
+| `"Barracks"`          | Marcadores de cuarteles     | Colócalos cerca de áreas militares    |
+| `"RadarS"`            | Estaciones de auspex        | Colócalas en terrenos elevados        |
+| `"AASite"`            | Posiciones de defensa aérea | Colócalas en cumbres de montañas      |
 
 ##### Detección de Objetos Físicos y Sistema de Variables  
 El script depende principalmente de los objetos de ubicación y variables en lugar de detectar estructuras físicas. Aquí tienes una explicación más precisa de cómo funciona:
@@ -171,11 +171,11 @@ El script **no** detecta automáticamente estructuras físicas como edificios de
 - O agregar variables a los objetos (incluidos los objetos Lógicos)
 - O dejar que el script utilice sus mecanismos de respaldo (generalmente colocando los marcadores en montañas)
 
-Por ejemplo, colocar un `Land_Radar_F` por sí solo no creará automáticamente un marcador de radar, a menos que:
+Por ejemplo, colocar un `Land_Radar_F` por sí solo no creará automáticamente un marcador de auspex, a menos que:
 - Le agregues la variable "RadarS", O
 - Coloque un `LocationEvacPoint_F` cerca que lo utilice como punto de referencia
 
-##### Mejores prácticas para la configuración de marcadores
+##### Buenas prácticas para la configuración de marcadores
 
 1. **Comienza con los objetos `LocationEvacPoint_F`:**
    - Colócalos en puntos estratégicos clave alrededor del mapa
@@ -348,5 +348,6 @@ Esta misión está disponible bajo la GNU GENERAL PUBLIC LICENSE.
 
 ## Créditos
 
-- Creado por el Grupo de Desarrollo de Operaciones en la Primera Línea
-- Agradecimientos especiales a los Primeros Partidarios por estar allí durante años de apoyo.
+- Creado por Frontline Operations Development Group
+- Un agradecimiento especial a los primeros colaboradores por su apoyo durante años literales.
+- Este fork concreto es propiedad del clan 40K-ESP quien ha iberizado y modificado el código a su gusto
