@@ -4,7 +4,7 @@ if (count _allFOBMarks == 0 ) then {
 	playMusic "EventTrack02_F_Curator";
 
 	
- hint "_Perdiste Tu ultimo FOB_";
+ hint "_Perdiste tu ultimo FOB_";
 sleep 4;	
  hint "_FOB de emergencia Activado_";
 
