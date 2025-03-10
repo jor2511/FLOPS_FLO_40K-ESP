@@ -25,7 +25,7 @@ publicVariable "MapBooard";
 			removeAllActions MapBooard;
 
 [MapBooard,[
-				"<img size=2 color='#7CC2FF' image='Screens\FOBA\talk_ca.paa'/><t font='PuristaBold' color='#7CC2FF'>Investigate Enemy Plans",
+				"<img size=2 color='#7CC2FF' image='Screens\FOBA\talk_ca.paa'/><t font='PuristaBold' color='#7CC2FF'>Investigar Planes Enemigos",
 				{
 					[(_this select 0)] execVM "Scripts\INTL.sqf";
 					(_this select 0) removeAction (_this select 2) ;		
