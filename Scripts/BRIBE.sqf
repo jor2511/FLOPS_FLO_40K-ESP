@@ -15,7 +15,7 @@ _mrkr setMarkerText str _NewScore;
 
 sleep 12;
 
-["showNotification", ["Apoyo", "Mejorado + + + (Soborno Efectivo)", "success"]] call FLO_fnc_intelSystem;
+["showNotification", ["Reputación", "Mejorada + + + (Soborno Efectivo)", "success"]] call FLO_fnc_intelSystem;
 
 }else{hint "Sin Recursos"; };
 }else{  hint "Sin Autorización, Policia Militar Avisada!"; };
