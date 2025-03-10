@@ -1,7 +1,7 @@
 sleep 18 ;
 
 
-["showNotification", ["Apoyo Reducido", "Linea Blindad Enemiga Mitigada por 1 Hora", "success"]] call FLO_fnc_intelSystem;
+["showNotification", ["Apoyo Reducido", "Linea Blindada Enemiga Mitigada por 1 Hora", "success"]] call FLO_fnc_intelSystem;
 
 
 
