@@ -15,7 +15,7 @@ if (_chance23 > 1) then {
 							_mrkr setMarkerAlpha 0.6;
 							
 								sleep 1;
-								["showNotification", ["+ NEW INTEL", "Civilian Intel Received", "intel"]] call FLO_fnc_intelSystem;
+								["showNotification", ["+ NUEVO INTEL", "Inteligencia Civil Recibida", "intel"]] call FLO_fnc_intelSystem;
 								_attackingAtGrid = mapGridPosition getMarkerPos _mrkr;
 								[[west,"HQ"], "Enemy Presence Confirmed at grid " + _attackingAtGrid] remoteExec ["sideChat", 0];
 			}else{
@@ -31,7 +31,7 @@ if (_chance23 > 1) then {
 							_mrkr setMarkerAlpha 0.6;
 
 								sleep 1;
-								["showNotification", ["+ NEW INTEL", "Civilian Intel Received", "intel"]] call FLO_fnc_intelSystem;
+								["showNotification", ["+ NUEVO INTEL", "Inteligencia Civil Recibida", "intel"]] call FLO_fnc_intelSystem;
 								_attackingAtGrid = mapGridPosition getMarkerPos _mrkr;
 								[[west,"HQ"], "Enemy Presence Confirmed at grid " + _attackingAtGrid] remoteExec ["sideChat", 0];
 			};
@@ -51,7 +51,7 @@ if (_chance23 > 1) then {
 						_mrkr setMarkerAlpha 0.6;
 
 									sleep 1;
-									["showNotification", ["+ NEW INTEL", "Civilian Intel Received", "intel"]] call FLO_fnc_intelSystem;
+									["showNotification", ["+ NUEVO INTEL", "Inteligencia Civil Recibida", "intel"]] call FLO_fnc_intelSystem;
 									_attackingAtGrid = mapGridPosition getMarkerPos _mrkr;
 									[[west,"HQ"], "Enemy Presence Confirmed at grid " + _attackingAtGrid] remoteExec ["sideChat", 0];
 					};
