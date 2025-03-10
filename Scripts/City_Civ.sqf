@@ -9,7 +9,7 @@ private _allBuildings = nearestObjects [_triggerPos, ["HOUSE"], 150];
 {
     _x removeAllEventHandlers "Killed";
     _x addEventHandler ["Killed", {
-        [playerSide, "HQ"] commandChat "WATCH for CIVILIAN PROPERTIES Corporal !";
+        [playerSide, "HQ"] commandChat "Cuidado con propiedad civil";
         [] execVM "Scripts\ReputationMinus.sqf";
         [] execVM "Scripts\Civ_Relations.sqf";
     }];
