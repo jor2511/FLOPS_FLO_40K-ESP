@@ -41,5 +41,5 @@ _selection append (allGroups select {side _x == west});
 
 titleText ["Patrulla Enemiga Avisada . . .", "BLACK IN",1];
 
-}else{hint "Not Enough Recources";};
+}else{hint "Sin Recursos Necesarios";};
 
