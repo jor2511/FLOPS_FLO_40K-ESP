@@ -18,5 +18,5 @@ sleep 12;
 ["showNotification", ["Reputación", "Mejorada + + + (Soborno Efectivo)", "success"]] call FLO_fnc_intelSystem;
 
 }else{hint "Sin Recursos"; };
-}else{  hint "Sin Autorización, Policia Militar Avisada!"; };
+}else{  hint "Sin Autorización, Policia Militar Avisada"; };
 
