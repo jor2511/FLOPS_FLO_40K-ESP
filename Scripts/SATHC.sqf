@@ -215,7 +215,7 @@ HCAM_0 cameraEffect ["Internal", "Back", "HCAM_S"];
 hint ""; 
 };
 
-} else { hint "Solo Altos Mandos";};
+} else { hint "Solo Personal Autorizado";};
 
 
 
