@@ -6,11 +6,11 @@ closeDialog 0;
 SatTrack = false ;
 
 openMap [true, true]; 
-hint "Seleccione Coordinador Imperial"; 
+hint "Seleccione Coordinador Satelital"; 
 onMapSingleClick {
 onMapSingleClick {}; 
 TSAT setpos _pos;
-hint 'Confirmada Coordinacion Armada Imperialis'; 
+hint 'Confirmada Coordinacion Satelital'; 
 openMap [true, false];  
 openMap [false, false]; 
 createDialog "Enlace_Armada_Imperial";
@@ -19,4 +19,4 @@ hint "";
 
 };
 
-} else { hint "Solo Altos Mandos";};
+} else { hint "Solo Personal Autorizado";};
