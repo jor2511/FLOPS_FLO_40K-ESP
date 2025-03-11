@@ -180,7 +180,7 @@ _TV setObjectTextureGlobal [0, "#(argb,512,512,1)r2t(HCAM_T,1.333)"];
 HCAM_0 cameraEffect ["Internal", "Back", "HCAM_S"]; 
 hint ""; 
 
-} else { hint "Solo Altos Mandos";};
+} else { hint "Solo Personal Autorizado";};
 
 
 
