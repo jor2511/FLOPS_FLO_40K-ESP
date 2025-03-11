@@ -2,7 +2,7 @@ GNR = nil;
 DVR = nil;
 
 
-titleText ["Sistemas Cogitadores Iniciando . . .", "BLACK IN",9999];
+titleText ["Iniciando Sistema Cogitador", "BLACK IN",9999];
 
 openMap [true, true]; 
 sleep 1;
