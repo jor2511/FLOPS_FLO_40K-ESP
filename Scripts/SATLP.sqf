@@ -27,16 +27,16 @@ sleep 0.2;
    }
  };	
 
-hint 'Iniciando Escaneo . . .'; 
+hint 'Iniciando Escaneo ...'; 
 openMap [true, false]; 
 openMap [false, false]; 
 createDialog "Enlace_Armada_Imperial";
 HCAM_0 cameraEffect ["Internal", "Back", "HCAM_S"]; 
-hint ""; 
+hint "Iniciando Escaneo ..."; 
 };
 
 
-} else { hint "Solo Altos Mandos";};
+} else { hint "Solo Personal Autorizado";};
 
 
 
