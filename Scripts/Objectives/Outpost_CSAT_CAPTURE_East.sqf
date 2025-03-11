@@ -16,7 +16,7 @@ _AGGRSCORE = parseNumber (markerText _mrkr) ;
 
 if (triggerActivated _thisCaptureEastTrigger) then {
 
-				[playerSide, 'HQ'] commandChat 'A todas las unidades, retrocedan. Este punto esta perdido,...';
+				[playerSide, 'HQ'] commandChat 'Replegaos, hemos perdido la posicion,...';
 
 				_allMarks = allMapMarkers select {markerType _x == 'b_installation'};  
 				_FOBMrk = [_allMarks,  _thisCaptureEastTrigger] call BIS_fnc_nearestPosition;
