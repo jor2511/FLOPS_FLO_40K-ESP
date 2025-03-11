@@ -99,7 +99,7 @@ if (_Chance == 4) then {
 		GNRT = "YES" ;
 		DVRT = "NO" ;
 		0 = [] spawn {
-			  _result = ["Intel sugiere el paradero del escuadrón aliado con el que perdimos contacto anteriormente. Podemos rastrearlos y rescatarlos. (Misión Opcional: Rescatar Escuadrón Desaparecido)", "", DVRT, GNRT,nil, false, false] call BIS_fnc_guiMessage;
+			  _result = ["Intel sugiere el paradero de la escuadra aliada con la que perdimos contacto anteriormente. Podemos rastrearlos y rescatarlos. (Misión Opcional: Rescatar escuadra Desaparecida)", "", DVRT, GNRT,nil, false, false] call BIS_fnc_guiMessage;
 
 						if (_result) then {
 							
