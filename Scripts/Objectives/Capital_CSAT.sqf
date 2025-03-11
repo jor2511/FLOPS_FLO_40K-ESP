@@ -175,7 +175,7 @@ private _fnc_createTrigger = {
     [
         "this",
         "
-        [parseText '<t color=""#1AA3FF"" font=""PuristaBold"" align = ""right"" shadow = ""1"" size=""2"">SITREP</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Nuestras fuerzas controlan la zona,</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Mantenerla para la captura,</t>', [0, 0.5, 1, 1], nil, 5, 1.7, 0] remoteExec ['BIS_fnc_textTiles', 0];
+        [parseText '<t color=""#1AA3FF"" font=""PuristaBold"" align = ""right"" shadow = ""1"" size=""2"">SITREP</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Fuerzas amigas dominando,</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Seguid luchando, capturaremos y aseguraremos la posicion,</t>', [0, 0.5, 1, 1], nil, 5, 1.7, 0] remoteExec ['BIS_fnc_textTiles', 0];
         
         private _allMarks = allMapMarkers select {markerType _x == 'n_installation'};
         private _FOBMrk = [_allMarks, thisTrigger] call BIS_fnc_nearestPosition;
