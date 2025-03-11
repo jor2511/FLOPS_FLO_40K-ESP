@@ -10,7 +10,7 @@ sleep 3 ;
 					
 				NewGuerGroup = createGroup West; 
 
-											_complMessage = selectRandom ["¡Claro, déjanos luchar contigo, Capitán!","Apreciamos sus esfuerzos por nuestra patria, ¡los ayudaremos!","¡Ey, muchachos, equípense, vamos a trabajar!"];
+											_complMessage = selectRandom ["¡Claro, déjanos luchar contigo","Apreciamos sus esfuerzos por nuestra patria, ¡los ayudaremos!","¡Ey, muchachos, equípense, vamos a trabajar!"];
 											["Militia", _complMessage] remoteExec ["BIS_fnc_showSubtitle"];
 
 					{ {
