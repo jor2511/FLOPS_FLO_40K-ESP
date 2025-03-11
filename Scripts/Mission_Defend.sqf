@@ -44,7 +44,7 @@ ENMASSMAINmarkerName setMarkerColor "colorOPFOR" ;
 ENMASSMAINmarkerName setMarkerSize [2, 2] ;
 ENMASSMAINmarkerName setMarkerAlpha 0.5 ;  
 
-["showNotification", [¡ADVERTENCIA!, "El intel sugiere que hay un gran grupo combinado enemigo preparandose para atacar!", "warning"]] call FLO_fnc_intelSystem;
+["showNotification", [¡ADVERTENCIA!, "Intel sugiere que hay un gran grupo combinado enemigo preparandose para atacar!", "warning"]] call FLO_fnc_intelSystem;
 
 
 sleep 1.5 ;
@@ -57,7 +57,7 @@ sleep 600 ;
 
 ["showNotification", [¡ADVERTENCIA!, "Los informes confirman que las fuerzas enemigas se estan movilizando, ¡preparate para el combate!", "warning"]] call FLO_fnc_intelSystem;
 _attackingAtGrid = mapGridPosition getMarkerPos ENMASSMAINmarkerName;
-[[west,"HQ"], "Friendly Location Under Enemy attack at grid " + _attackingAtGrid] remoteExec ["sideChat", 0];
+[[west,"HQ"], "Zona aliada bajo ataque en: " + _attackingAtGrid] remoteExec ["sideChat", 0];
 
 
 playMusic "LeadTrack05_F_Tank";
