@@ -49,7 +49,7 @@ false
 ] call BIS_fnc_holdActionAdd; 
 
 SC_Action = [ player,
-"<img size=2 color='#7CC2FF' image='\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa'/><t color='#7CC2FF'>Mision: Interceptar convoys</t>",
+"<img size=2 color='#7CC2FF' image='\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa'/><t color='#7CC2FF'>Mision: Interceptar convoy</t>",
 '\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa',
 '\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa',
 'true',       
@@ -72,7 +72,7 @@ false
 ] call BIS_fnc_holdActionAdd; 
 
 BS_Action = [ player,
-"<img size=2 color='#7CC2FF' image='\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa'/><t color='#7CC2FF'>Mision: Infiltracion en barco</t>",
+"<img size=2 color='#7CC2FF' image='\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa'/><t color='#7CC2FF'>Mision: Infiltracion en Buque</t>",
 '\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa',
 '\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa',
 'true',       
