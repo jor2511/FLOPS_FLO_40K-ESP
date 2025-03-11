@@ -43,7 +43,7 @@ if (count (nearestObjects [getPos thisOutpostTrigger, FLO_configCache get "tyres
 
         sleep 1;
         _NewVeh addEventHandler ["Killed", {
-            ["ScoreAdded", ["Enemy Armor Sabotaged", 30]] remoteExec ["BIS_fnc_showNotification", 0];
+            ["ScoreAdded", ["Blindado Saboteado", 30]] remoteExec ["BIS_fnc_showNotification", 0];
             [30] call FLO_fnc_addReward;
             playMusic "EventTrack01_F_Curator";
             execVM 'Scripts\LogisDis.sqf';
@@ -120,7 +120,7 @@ _trg setTriggerActivation ["WEST SEIZED", "PRESENT", true];
 _trg setTriggerStatements [  
 "this",  "  
 
-[parseText '<t color=""#1AA3FF"" font=""PuristaBold"" align = ""right"" shadow = ""1"" size=""2"">SITREP</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Hemos realizado una captura exitosa,</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Mantengan la presencia hasta los refuerzos,</t>', [0, 0.5, 1, 1], nil, 5, 1.7, 0] remoteExec ['BIS_fnc_textTiles', 0];
+[parseText '<t color=""#1AA3FF"" font=""PuristaBold"" align = ""right"" shadow = ""1"" size=""2"">SITREP</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Fuerzas amigas dominando,</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Seguid luchando, capturaremos y aseguraremos la posicion,</t>', [0, 0.5, 1, 1], nil, 5, 1.7, 0] remoteExec ['BIS_fnc_textTiles', 0];
 _allMarks = allMapMarkers select {markerType _x == 'o_support'};  
 _FOBMrk = [_allMarks,  thisTrigger] call BIS_fnc_nearestPosition;
                     _FOBMrk setMarkerColor 'ColorGrey' ;    
