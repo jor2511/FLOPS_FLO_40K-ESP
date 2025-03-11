@@ -61,7 +61,7 @@ _trg setTriggerActivation ["WEST SEIZED", "PRESENT", true];
 _trg setTriggerStatements [  
 "this",  "  
 
-[parseText '<t color=""#1AA3FF"" font=""PuristaBold"" align = ""right"" shadow = ""1"" size=""2"">SITREP</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Friendly Forces Dominating the Battle,</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Keep Up the Fight, We will Capture and Secure the Outpost,</t>', [0, 0.5, 1, 1], nil, 5, 1.7, 0] remoteExec ['BIS_fnc_textTiles', 0];
+[parseText '<t color=""#1AA3FF"" font=""PuristaBold"" align = ""right"" shadow = ""1"" size=""2"">SITREP</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Buena captura Guardias,</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">El Munitorum usara bien este fuerte,</t>', [0, 0.5, 1, 1], nil, 5, 1.7, 0] remoteExec ['BIS_fnc_textTiles', 0];
 _allMarks = allMapMarkers select {markerType _x == 'o_installation'};  
 _FOBMrk = [_allMarks,  thisTrigger] call BIS_fnc_nearestPosition;
 						_FOBMrk setMarkerColor 'ColorGrey' ;	
