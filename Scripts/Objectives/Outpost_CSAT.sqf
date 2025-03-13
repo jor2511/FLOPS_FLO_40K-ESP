@@ -43,7 +43,7 @@ if (count (nearestObjects [getPos thisOutpostTrigger, FLO_configCache get "tyres
 
         sleep 1;
         _NewVeh addEventHandler ["Killed", {
-            ["ScoreAdded", ["Blindado Saboteado", 30]] remoteExec ["BIS_fnc_showNotification", 0];
+            ["ScoreAdded", ["Blindado Enemigo Saboteado", 30]] remoteExec ["BIS_fnc_showNotification", 0];
             [30] call FLO_fnc_addReward;
             playMusic "EventTrack01_F_Curator";
             execVM 'Scripts\LogisDis.sqf';
