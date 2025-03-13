@@ -161,7 +161,7 @@ _trg setTriggerStatements [
 				_FOBMrk = [_allMarks,  thisTrigger] call BIS_fnc_nearestPosition;
 				_FOBMrk setMarkerColor 'ColorGrey' ;	
 				_attackingAtGrid = mapGridPosition getMarkerPos _FOBMrk;
-				[[west,'HQ'], 'Se reporta una captura exitosa en: ' + _attackingAtGrid] remoteExec ['sideChat', 0];					
+				[[west,'MTI'], 'Fuerzas Enemigas Dominando la Batalla en coordenadas: ' + _attackingAtGrid] remoteExec ['sideChat', 0];					
 				
 				[thisTrigger] execVM 'Scripts\Objectives\City_CSAT_CAPTURE_East.sqf';
 
