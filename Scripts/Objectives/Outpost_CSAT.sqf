@@ -125,7 +125,7 @@ _allMarks = allMapMarkers select {markerType _x == 'o_support'};
 _FOBMrk = [_allMarks,  thisTrigger] call BIS_fnc_nearestPosition;
                     _FOBMrk setMarkerColor 'ColorGrey' ;    
                                 _attackingAtGrid = mapGridPosition getMarkerPos _FOBMrk;
-                            [[west,'HQ'], 'La Guardia domina esta posicion: ' + _attackingAtGrid] remoteExec ['sideChat', 0];
+                            [[west,'HQ'], 'Fuerzas Amigas dominando la Batalla en coordenadas: ' + _attackingAtGrid] remoteExec ['sideChat', 0];
 
 [thisTrigger] execVM 'Scripts\Objectives\Outpost_CSAT_CAPTURE_West.sqf';
 
