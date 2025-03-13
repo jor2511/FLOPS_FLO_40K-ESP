@@ -153,12 +153,13 @@ _trg setTriggerActivation ["EAST SEIZED", "PRESENT", true];
 _trg setTriggerStatements [  
 "this",  "  
 
-				[parseText '<t color=""#FF3619"" font=""PuristaBold"" align = ""right"" shadow = ""1"" size=""2"">SITREP</t><br /><t color=""#7c7c7c""  align = ""right"" shadow = ""1"" size=""0.8"">Enemy Forces Dominating the Battle,</t><br /><t color=""#7c7c7c"" align = ""right"" shadow = ""1"" size=""0.8"">Keep Up the Fight, We Must Defend and Take Back the Outpost, </t>', [0, 0.5, 1, 1], nil, 5, 1.7, 0] remoteExec ['BIS_fnc_textTiles', 0];
+				[parseText '<t color=""#FF3619"" font=""PuristaBold"" align = ""right"" shadow = ""1"" size=""2"">SITREP</t><br /><t color=""#7c7c7c""  align = ""right"" shadow = ""1"" size=""0.8"">Seguid luchando, retomaremos y defenderemos la posicion
+,</t><br /><t color=""#7c7c7c"" align = ""right"" shadow = ""1"" size=""0.8"">Fuerzas Enemigas Dominando la Batalla, </t>', [0, 0.5, 1, 1], nil, 5, 1.7, 0] remoteExec ['BIS_fnc_textTiles', 0];
 				_allMarks = allMapMarkers select {markerType _x == 'b_installation'};  
 				_FOBMrk = [_allMarks,  thisTrigger] call BIS_fnc_nearestPosition;
 				_FOBMrk setMarkerColor 'ColorGrey' ;	
 				_attackingAtGrid = mapGridPosition getMarkerPos _FOBMrk;
-				[[west,'HQ'], 'Enemy Forces Dominating the Battle at grid ' + _attackingAtGrid] remoteExec ['sideChat', 0];					
+				[[west,'MTI'], 'Fuerzas enemigas dominando la batalla en coordenadas:  ' + _attackingAtGrid] remoteExec ['sideChat', 0];					
 				
 				[thisTrigger] execVM 'Scripts\Objectives\Outpost_CSAT_CAPTURE_East.sqf';
 

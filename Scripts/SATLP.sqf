@@ -6,7 +6,7 @@ if (((serverCommandAvailable "#kick")  &&  (serverCommandAvailable "#debug") && 
 SatTrack = true ;
 
 openMap [true, true]; 
-hint "Select Satellite Target"; 
+hint "Seleccione Objetivo Escaneo"; 
 onMapSingleClick {
 onMapSingleClick {}; 
 TSAT setpos _pos;
@@ -27,16 +27,16 @@ sleep 0.2;
    }
  };	
 
-hint 'Satellite Lock Initialized'; 
+hint 'Iniciando Escaneo ...'; 
 openMap [true, false]; 
 openMap [false, false]; 
-createDialog "Satellite_Control_Tablet";
+createDialog "Enlace_Armada_Imperial";
 HCAM_0 cameraEffect ["Internal", "Back", "HCAM_S"]; 
-hint ""; 
+hint "Iniciando Escaneo ..."; 
 };
 
 
-} else { hint "only Admins and Commanders Have Access";};
+} else { hint "Solo Personal Autorizado";};
 
 
 

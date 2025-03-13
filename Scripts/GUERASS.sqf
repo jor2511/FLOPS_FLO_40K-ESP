@@ -10,7 +10,7 @@ sleep 3 ;
 					
 				NewGuerGroup = createGroup West; 
 
-											_complMessage = selectRandom ["Sure, Let us Fight with you Captain !!","We appericiate your Efforts for our Homeland,We will Help you!","Hey Men, Gear Up, Lets get to work !!!"];
+											_complMessage = selectRandom ["¡Claro, déjanos luchar contigo","Apreciamos sus esfuerzos por nuestra patria, ¡los ayudaremos!","¡Ey, muchachos, equípense, vamos a trabajar!"];
 											["Militia", _complMessage] remoteExec ["BIS_fnc_showSubtitle"];
 
 					{ {
@@ -30,7 +30,10 @@ sleep 3 ;
 
 
 												
-											_complMessage = selectRandom ["We Dont talk to Strangers!","I don't know much about this Region!","Sorry but I dont Trust you Outsiders!","Maybe that Man there can Help you, He has been with the Army years ago !"];
+											_complMessage = selectRandom ["¡No hablamos con extraños!","No sé mucho sobre esta región.","Lo siento, pero no confío en los forasteros.","Tal vez ese hombre de allí pueda ayudarte, estuvo en el ejército hace años."
+
+
+];
 											["Militia", _complMessage] remoteExec ["BIS_fnc_showSubtitle"];
 
 

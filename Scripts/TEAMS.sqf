@@ -2,12 +2,12 @@ GNR = nil;
 DVR = nil;
 
 
-titleText ["Control System Initializing . . .", "BLACK IN",9999];
+titleText ["Iniciando Sistema Cogitador", "BLACK IN",9999];
 
 openMap [true, true]; 
 sleep 1;
 titleText ["", "BLACK IN",1];
-hint "Select Target Unit"; 
+hint "Seleccione Unidad Objetivo"; 
 onMapSingleClick {
 onMapSingleClick {}; 
 
@@ -55,7 +55,7 @@ publicVariable "ZEUSNetworkId";
  }; 
 
 
-hint "YOU CANT SWITCH TO HUMAN PLAYERS";
+hint "NO PUEDE CAMBIAR A JUGADORES HUMANOS";
 };
 
 if ((_Unt isKindOf  "Man") && (!isPlayer _Unt)) then {

@@ -6,7 +6,7 @@ _REPSCORE = parseNumber (markerText _mrkr) ;
 
 if (_REPSCORE != 16) then {
 
-["showNotification", ["REPUTATION", "Increased + + +", "success"]] call FLO_fnc_intelSystem;
+["showNotification", ["REPUTACION", "Aumentada + + +", "success"]] call FLO_fnc_intelSystem;
 
 
 _NewScore = _REPSCORE + 1; 

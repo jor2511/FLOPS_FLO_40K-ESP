@@ -15,7 +15,7 @@ if (count (nearestObjects [getPos thisOutpostTrigger, FLO_configCache get "helip
     _V setDir _dir;
 
     _V addEventHandler ["Killed", {
-        ["ScoreAdded", ["Enemy Aircraft Sabotaged", 20]] remoteExec ["BIS_fnc_showNotification", 0];
+        ["ScoreAdded", ["Aeronave Enemiga Saboteada", 20]] remoteExec ["BIS_fnc_showNotification", 0];
         [20] call FLO_fnc_addReward;
         playMusic "EventTrack01_F_Curator";
         execVM 'Scripts\HeliDis.sqf';
@@ -43,7 +43,7 @@ if (count (nearestObjects [getPos thisOutpostTrigger, FLO_configCache get "tyres
 
         sleep 1;
         _NewVeh addEventHandler ["Killed", {
-            ["ScoreAdded", ["Enemy Armor Sabotaged", 30]] remoteExec ["BIS_fnc_showNotification", 0];
+            ["ScoreAdded", ["Blindado Enemigo Saboteado", 30]] remoteExec ["BIS_fnc_showNotification", 0];
             [30] call FLO_fnc_addReward;
             playMusic "EventTrack01_F_Curator";
             execVM 'Scripts\LogisDis.sqf';
@@ -71,7 +71,7 @@ _VLAMP = createVehicle [ "Land_LampAirport_F", _poss, [], 5, "NONE"];
 
 // Create Intel
 // Reason it's like this is because we want intel to be in different buildings
-_allBuildings = nearestObjects [(getpos thisOutpostTrigger), (FLO_configCache get "buildings"), 300];  
+_allBuildings = nearestObjects [(getpos thisOutpostTrigger), (FLO_configCache get "buildings"), 300];  //Cambiar a 150, si salen a 300 no salen en la base
 
 HQBLDNG = selectRandom _allBuildings;
 _dir = getDirVisual HQBLDNG;
@@ -120,12 +120,12 @@ _trg setTriggerActivation ["WEST SEIZED", "PRESENT", true];
 _trg setTriggerStatements [  
 "this",  "  
 
-[parseText '<t color=""#1AA3FF"" font=""PuristaBold"" align = ""right"" shadow = ""1"" size=""2"">SITREP</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Friendly Forces Dominating the Battle,</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Keep Up the Fight, We will Capture and Secure the Outpost,</t>', [0, 0.5, 1, 1], nil, 5, 1.7, 0] remoteExec ['BIS_fnc_textTiles', 0];
+[parseText '<t color=""#1AA3FF"" font=""PuristaBold"" align = ""right"" shadow = ""1"" size=""2"">SITREP</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Fuerzas amigas dominando,</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Seguid luchando, capturaremos y aseguraremos la posicion,</t>', [0, 0.5, 1, 1], nil, 5, 1.7, 0] remoteExec ['BIS_fnc_textTiles', 0];
 _allMarks = allMapMarkers select {markerType _x == 'o_support'};  
 _FOBMrk = [_allMarks,  thisTrigger] call BIS_fnc_nearestPosition;
                     _FOBMrk setMarkerColor 'ColorGrey' ;    
                                 _attackingAtGrid = mapGridPosition getMarkerPos _FOBMrk;
-                            [[west,'HQ'], 'Friendly Forces Dominating the Battle at grid ' + _attackingAtGrid] remoteExec ['sideChat', 0];
+                            [[west,'HQ'], 'Fuerzas Amigas dominando la Batalla en coordenadas: ' + _attackingAtGrid] remoteExec ['sideChat', 0];
 
 [thisTrigger] execVM 'Scripts\Objectives\Outpost_CSAT_CAPTURE_West.sqf';
 

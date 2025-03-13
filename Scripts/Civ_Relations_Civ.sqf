@@ -18,7 +18,7 @@ CIVGRPER= _this select 0;
 
 			_x addEventHandler ["Killed", {
 			if (side (_this select 1) == west) then {
-			[playerSide, "HQ"] commandChat "WATCH for CIVILIAN CASUALITY Corporal !"; 
+			[playerSide, "HQ"] commandChat "Cuidado con las bajas civiles"; 
 
 			removeAllActions (_this select 0);
 			{(_this select 0) playMove "";  } remoteExec ["call", 0];

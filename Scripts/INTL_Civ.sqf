@@ -15,9 +15,9 @@ if (_chance23 > 1) then {
 							_mrkr setMarkerAlpha 0.6;
 							
 								sleep 1;
-								["showNotification", ["+ NEW INTEL", "Civilian Intel Received", "intel"]] call FLO_fnc_intelSystem;
+								["showNotification", ["+ NUEVA INTEL", "HUMINT Recibido", "intel"]] call FLO_fnc_intelSystem;
 								_attackingAtGrid = mapGridPosition getMarkerPos _mrkr;
-								[[west,"HQ"], "Enemy Presence Confirmed at grid " + _attackingAtGrid] remoteExec ["sideChat", 0];
+								[[west,"MTI"], "Presencia enemiga confirmada en:  " + _attackingAtGrid] remoteExec ["sideChat", 0];
 			}else{
 
 							_INTL = allMapMarkers select { (markerAlpha _x == 0.001 or markerAlpha _x == 0) && markerColor _x == "colorOPFOR" && markerType _x == "o_unknown" && markerType _x != "o_inf" && markerType _x != "o_Ordnance" && markerType _x != "o_maint" && markerShape _x != "RECTANGLE" && markerShape _x != "ELLIPSE"};
@@ -31,9 +31,9 @@ if (_chance23 > 1) then {
 							_mrkr setMarkerAlpha 0.6;
 
 								sleep 1;
-								["showNotification", ["+ NEW INTEL", "Civilian Intel Received", "intel"]] call FLO_fnc_intelSystem;
+								["showNotification", ["+ NUEVA INTEL", "HUMINT Recibida", "intel"]] call FLO_fnc_intelSystem;
 								_attackingAtGrid = mapGridPosition getMarkerPos _mrkr;
-								[[west,"HQ"], "Enemy Presence Confirmed at grid " + _attackingAtGrid] remoteExec ["sideChat", 0];
+								[[west,"MTI"], "Presencia enemiga confirmada en: " + _attackingAtGrid] remoteExec ["sideChat", 0];
 			};
 
 	}else{
@@ -51,9 +51,9 @@ if (_chance23 > 1) then {
 						_mrkr setMarkerAlpha 0.6;
 
 									sleep 1;
-									["showNotification", ["+ NEW INTEL", "Civilian Intel Received", "intel"]] call FLO_fnc_intelSystem;
+									["showNotification", ["+ NUEVA INTEL", "HUMINT Recibida", "intel"]] call FLO_fnc_intelSystem;
 									_attackingAtGrid = mapGridPosition getMarkerPos _mrkr;
-									[[west,"HQ"], "Enemy Presence Confirmed at grid " + _attackingAtGrid] remoteExec ["sideChat", 0];
+									[[west,"MTI"], "Presencia enemiga confirmada en:  " + _attackingAtGrid] remoteExec ["sideChat", 0];
 					};
 	};
 	

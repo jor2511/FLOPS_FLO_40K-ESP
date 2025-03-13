@@ -1,5 +1,5 @@
 MissionType = _this select 0;
-titleText ["Missions Initializing . . .", "BLACK IN", 9999];
+titleText ["Iniciando Cogitador Tactico . . .", "BLACK IN", 9999];
 
 // Create mission markers based on mission type
 switch (MissionType) do {

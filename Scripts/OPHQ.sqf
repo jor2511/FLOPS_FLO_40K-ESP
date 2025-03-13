@@ -28,7 +28,7 @@ CreatedVEH allowDammage false ;
 
 
 Ind01 = [ CreatedVEH,
-"<t color='#FF0000'>CANCEL</t>",
+"<t color='#FF0000'>CANCELAR</t>",
 'Screens\FOBA\iconRepairAt_ca.paa',
 'Screens\FOBA\iconRepairAt_ca.paa',
 'true',       
@@ -71,7 +71,7 @@ CursorTracker = false ;
 (_this select 0) removeAction Ind01;
 (_this select 0) removeAction Ind02;
 [(_this select 0),[
-	"<img size=2 color='#7CC2FF' image='Screens\FOBA\b_hq.paa'/><t font='PuristaBold' color='#7CC2FF'>UnPack OP",
+	"<img size=2 color='#7CC2FF' image='Screens\FOBA\b_hq.paa'/><t font='PuristaBold' color='#7CC2FF'>Desplegar OP",
 	"Scripts\OPUNPACK.sqf",
 	nil,
 	0,
@@ -94,8 +94,8 @@ false
 ] call BIS_fnc_holdActionAdd; 
 
 
-}else{hint "Not enough Resources";};
+}else{hint "Sin Recursos";};
 
-}else{  hint "You are not authorized for this Request Soldier!"; };
+}else{  hint "No estas autorizado para esta solicitud"; };
 
 	closeDialog 0;

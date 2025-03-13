@@ -26,7 +26,7 @@ _objectLoc = nearestobjects [getPos _thisFactoryTrigger, ["O_MBT_02_cannon_F"], 
 
 	sleep 1;
 		_NewVeh addEventHandler ["Killed", {
-	["ScoreAdded", ["Enemy Armor Sabotaged", 10]] remoteExec ["BIS_fnc_showNotification", 0];
+	["ScoreAdded", ["Blindado Enemigo Saboteado", 10]] remoteExec ["BIS_fnc_showNotification", 0];
 	[10] call FLO_fnc_addReward; 
 	playMusic "EventTrack01_F_Curator"; 
 	execVM 'Scripts\ArmorDis.sqf';
@@ -145,7 +145,7 @@ _TFOBB setTriggerActivation [""EAST SEIZED"", ""PRESENT"", false];
 _TFOBB setTriggerStatements [
 'this && {(alive _x) && ((side _x) == WEST) && (position _x inArea thisTrigger)} count allUnits < 5 ','
 
-[playerSide, 'HQ'] commandChat 'all Forces Fall Back. We Lost the Region,...';
+[playerSide, 'MTI'] commandChat 'Replegaos, perdimos la region,...';
 
 _allMarks = allMapMarkers select {markerPos _x inArea thisTrigger && markerType _x == 'b_installation'};  
 	{ deleteMarker _x ; } forEach _allMarks; 

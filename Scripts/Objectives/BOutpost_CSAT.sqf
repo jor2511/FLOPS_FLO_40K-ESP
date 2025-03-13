@@ -23,7 +23,7 @@ _V setDir _dir;
 sleep 3;
 
 _V addEventHandler ["Killed", {  
-["ScoreAdded", ["Enemy Aircraft Sabotaged", 20]] remoteExec ["BIS_fnc_showNotification", 0];
+["ScoreAdded", ["Aeronave Enemiga Saboteada", 20]] remoteExec ["BIS_fnc_showNotification", 0];
 [20] call FLO_fnc_addReward;
  playMusic "EventTrack01_F_Curator"; 
  execVM 'Scripts\HeliDis.sqf';
@@ -44,7 +44,7 @@ _PRL = [_HPAD getPos [(10 +(random 20)), (0 + (random 360))], East, [selectRando
 [_PRL, _HPAD getPos [(10 +(random 20)), (0 + (random 360))], 50] call BIS_fnc_taskPatrol;
 
 _V addEventHandler ["Killed", {  
-["ScoreAdded", ["Enemy Aircraft Sabotaged", 20]] remoteExec ["BIS_fnc_showNotification", 0];
+["ScoreAdded", ["Aeronave Enemiga Saboteada", 20]] remoteExec ["BIS_fnc_showNotification", 0];
 [20] call FLO_fnc_addReward;
  playMusic "EventTrack01_F_Curator"; 
 
@@ -167,12 +167,12 @@ _trg setTriggerActivation ["WEST SEIZED", "PRESENT", true];
 _trg setTriggerStatements [  
 "this",  "  
 
-[parseText '<t color=""#1AA3FF"" font=""PuristaBold"" align = ""right"" shadow = ""1"" size=""2"">SITREP</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Friendly Forces Dominating the Battle,</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Keep Up the Fight, We will Capture and Secure the Outpost,</t>', [0, 0.5, 1, 1], nil, 5, 1.7, 0] remoteExec ['BIS_fnc_textTiles', 0];
+[parseText '<t color=""#1AA3FF"" font=""PuristaBold"" align = ""right"" shadow = ""1"" size=""2"">SITREP</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Fuerzas amigas dominando,</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Seguid luchando,capturaremos y aseguraremos la posicion</t>', [0, 0.5, 1, 1], nil, 5, 1.7, 0] remoteExec ['BIS_fnc_textTiles', 0];
 _allMarks = allMapMarkers select {markerType _x == 'n_support'};  
 _FOBMrk = [_allMarks,  thisTrigger] call BIS_fnc_nearestPosition;
 						_FOBMrk setMarkerColor 'ColorGrey' ;	
 									_attackingAtGrid = mapGridPosition getMarkerPos _FOBMrk;
-								[[west,'HQ'], 'Friendly Forces Dominating the Battle at grid ' + _attackingAtGrid] remoteExec ['sideChat', 0];
+								[[west,'MTI'], 'Fuerzas aliadas dominando la batalla en coordenadas:  ' + _attackingAtGrid] remoteExec ['sideChat', 0];
 
 [thisTrigger] execVM 'Scripts\Objectives\Outpost_CSAT_CAPTURE_West.sqf';
 

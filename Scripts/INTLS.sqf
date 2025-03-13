@@ -7,6 +7,6 @@ _x setMarkerAlpha 1;
 openMap true;
  [[7000, 7000], position player, 1.5] call BIS_fnc_zoomOnArea;
 sleep 1;
-["showNotification", ["+ NEW INTEL", "Satellite Intel Received", "intel"]] call FLO_fnc_intelSystem;
+["showNotification", ["+ NUEVO INTEL", "Inteligencia Satelital Recibida", "intel"]] call FLO_fnc_intelSystem;
 
  
