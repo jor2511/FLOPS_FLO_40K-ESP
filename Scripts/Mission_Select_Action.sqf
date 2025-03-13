@@ -1,4 +1,4 @@
-hint "Selecciona la mision" ; 
+hint "Selecciona Mision" ; 
 
 CS_Action = [ player,
 "<img size=2 color='#7CC2FF' image='\a3\Ui_f\data\Map\Markers\Military\warning_CA.paa'/><t color='#7CC2FF'>Mision: Rescatar Piloto</t>",
