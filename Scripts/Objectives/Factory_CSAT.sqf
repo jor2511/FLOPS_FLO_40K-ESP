@@ -26,7 +26,7 @@ _objectLoc = nearestobjects [getPos _thisFactoryTrigger, ["O_MBT_02_cannon_F"], 
 
 	sleep 1;
 		_NewVeh addEventHandler ["Killed", {
-	["ScoreAdded", ["Enemy Armor Sabotaged", 10]] remoteExec ["BIS_fnc_showNotification", 0];
+	["ScoreAdded", ["Blindado Enemigo Saboteado", 10]] remoteExec ["BIS_fnc_showNotification", 0];
 	[10] call FLO_fnc_addReward; 
 	playMusic "EventTrack01_F_Curator"; 
 	execVM 'Scripts\ArmorDis.sqf';
