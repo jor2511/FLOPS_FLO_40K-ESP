@@ -17,7 +17,7 @@ if (_Chance == 5) then {
 								sleep 1;
 								["showNotification", ["+ NUEVA INTEL", "Inteligencia Militar Recibida", "intel"]] call FLO_fnc_intelSystem;
 									_attackingAtGrid = mapGridPosition getMarkerPos _x;
-								[[west,"HQ"], "Presencia enemiga confirmada en: " + _attackingAtGrid] remoteExec ["sideChat", 0];
+								[[west,"MTI"], "Presencia enemiga confirmada en: " + _attackingAtGrid] remoteExec ["sideChat", 0];
 
 						} ;
 
@@ -46,7 +46,7 @@ if (_Chance == 3) then {
 								sleep 1;
 								["showNotification", ["+ NUEVA INTEL", "Inteligencia Militar Recibida", "intel"]] call FLO_fnc_intelSystem;
 									_attackingAtGrid = mapGridPosition getMarkerPos _x;
-								[[west,"HQ"], "Presencia enemiga confirmada en: " + _attackingAtGrid] remoteExec ["sideChat", 0];
+								[[west,"MTI"], "Presencia enemiga confirmada en: " + _attackingAtGrid] remoteExec ["sideChat", 0];
 						} ;
 
 						if (!_result) then {
@@ -86,7 +86,7 @@ if (_Chance == 3) then {
 								sleep 1;
 								["showNotification", ["+ NUEVA INTEL", "Inteligencia Militar Recibida", "intel"]] call FLO_fnc_intelSystem;
 									_attackingAtGrid = mapGridPosition getMarkerPos _mrkr;
-								[[west,"HQ"], "Presencia enemiga confirmada en: " + _attackingAtGrid] remoteExec ["sideChat", 0];
+								[[west,"MTI"], "Presencia enemiga confirmada en: " + _attackingAtGrid] remoteExec ["sideChat", 0];
 						  };
 		};
 
@@ -110,7 +110,7 @@ if (_Chance == 4) then {
 								sleep 1;
 								["showNotification", ["+ NUEVA INTEL", "Inteligencia Militar Recibida", "intel"]] call FLO_fnc_intelSystem;
 									_attackingAtGrid = mapGridPosition getMarkerPos _x;
-								[[west,"HQ"], "Presencia enemiga confirmada en: " + _attackingAtGrid] remoteExec ["sideChat", 0];
+								[[west,"MTI"], "Presencia enemiga confirmada en: " + _attackingAtGrid] remoteExec ["sideChat", 0];
 						} ;
 
 						if (!_result) then {
@@ -150,7 +150,7 @@ if (_Chance == 4) then {
 								sleep 1;
 								["showNotification", ["+ NUEVA INTEL", "Inteligencia Militar Recibida", "intel"]] call FLO_fnc_intelSystem;
 									_attackingAtGrid = mapGridPosition getMarkerPos _mrkr;
-								[[west,"HQ"], "Presencia enemiga confirmada en: " + _attackingAtGrid] remoteExec ["sideChat", 0];
+								[[west,"MTI"], "Presencia enemiga confirmada en: " + _attackingAtGrid] remoteExec ["sideChat", 0];
 						  };
 		};
 
@@ -166,7 +166,7 @@ _x setMarkerAlpha 1;
 								sleep 1;
 								["showNotification", ["+ NUEVA INTEL", "Inteligencia Militar Recibida", "intel"]] call FLO_fnc_intelSystem;
 									_attackingAtGrid = mapGridPosition getMarkerPos _x;
-								[[west,"HQ"],  "Presencia enemiga confirmada en: " + _attackingAtGrid] remoteExec ["sideChat", 0];
+								[[west,"MTI"],  "Presencia enemiga confirmada en: " + _attackingAtGrid] remoteExec ["sideChat", 0];
 };
 
 
