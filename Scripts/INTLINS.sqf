@@ -2,10 +2,10 @@ sleep 2;
 _Chance = selectRandom [0, 1, 2, 3, 4, 5]; 
 
 if (_Chance == 5) then {
-		GNRT = "YES" ;
+		GNRT = "SI" ;
 		DVRT = "NO" ;
 		0 = [] spawn {
-			  _result = ["El Intel sugiere que un convoy de apoyo enemigo será enviado hacia el frente. Podemos interceptarlo y desmantelar sus refuerzos y operación de apoyo. (Misión Opcional: Destruir Convoy Enemigo)", "", DVRT, GNRT,nil, false, false] call BIS_fnc_guiMessage;
+			  _result = ["La Intel sugiere que un convoy de apoyo enemigo será enviado hacia el frente. Podemos interceptarlo y desmantelar sus refuerzos y operación de apoyo. (Misión Opcional: Destruir Convoy Enemigo)", "", DVRT, GNRT,nil, false, false] call BIS_fnc_guiMessage;
 
 
 						if (_result) then {
@@ -32,10 +32,10 @@ if (_Chance == 5) then {
 
 
 if (_Chance == 3) then {
-		GNRT = "YES" ;
+		GNRT = "SI" ;
 		DVRT = "NO" ;
 		0 = [] spawn {
-			  _result = [" INTEL sobre el lugar de un accidente aéreo aliado, podemos rastrearlo, rescatar al piloto y destruir los restos. (Misión Opcional: Rescatar al Piloto Capturado)", "", DVRT, GNRT,nil, false, false] call BIS_fnc_guiMessage;
+			  _result = [" INTEL sobre accidente aéreo aliado, podemos rastrearlo, rescatar al piloto y destruir los restos. (Misión Opcional: Rescatar al Piloto Capturado)", "", DVRT, GNRT,nil, false, false] call BIS_fnc_guiMessage;
 
 						if (_result) then {
 							
@@ -96,7 +96,7 @@ if (_Chance == 3) then {
 
 
 if (_Chance == 4) then {
-		GNRT = "YES" ;
+		GNRT = "SI" ;
 		DVRT = "NO" ;
 		0 = [] spawn {
 			  _result = ["Intel sugiere el paradero de la escuadra aliada con la que perdimos contacto anteriormente. Podemos rastrearlos y rescatarlos. (Misión Opcional: Rescatar escuadra Desaparecida)", "", DVRT, GNRT,nil, false, false] call BIS_fnc_guiMessage;
