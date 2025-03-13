@@ -159,7 +159,7 @@ _trg setTriggerStatements [
 				_FOBMrk = [_allMarks,  thisTrigger] call BIS_fnc_nearestPosition;
 				_FOBMrk setMarkerColor 'ColorGrey' ;	
 				_attackingAtGrid = mapGridPosition getMarkerPos _FOBMrk;
-				[[west,'HQ'], 'Fuerzas enemigas dominando la batalla en coordenadas:  ' + _attackingAtGrid] remoteExec ['sideChat', 0];					
+				[[west,'MTI'], 'Fuerzas enemigas dominando la batalla en coordenadas:  ' + _attackingAtGrid] remoteExec ['sideChat', 0];					
 				
 				[thisTrigger] execVM 'Scripts\Objectives\Outpost_CSAT_CAPTURE_East.sqf';
 
