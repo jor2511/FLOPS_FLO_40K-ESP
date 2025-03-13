@@ -89,10 +89,10 @@ if (isNil "FLO_OPFOR_Resources") then {
         ["initResourceLoop", {
             // Define resource values for different installation types
             private _resourceValues = createHashMapFromArray [
-                ["o_installation", 7],    // Military Outpost
-                ["n_support", 5],         // Military Service Post
-                ["o_support", 3],         // Military Road Post
-                ["n_installation", 15]    // Military Headquarters
+                ["o_installation", 4],    // Military Outpost
+                ["n_support", 15],         // Military Service Post
+                ["o_support", 1],         // Military Road Post
+                ["n_installation", 25]    // Military Headquarters
             ];
 
             // Spawn continuous resource generation loop
