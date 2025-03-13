@@ -15,7 +15,7 @@ if (count (nearestObjects [getPos thisOutpostTrigger, FLO_configCache get "helip
     _V setDir _dir;
 
     _V addEventHandler ["Killed", {
-        ["ScoreAdded", ["Aeronave Saboteada", 20]] remoteExec ["BIS_fnc_showNotification", 0];
+        ["ScoreAdded", ["Aeronave Enemiga Saboteada", 20]] remoteExec ["BIS_fnc_showNotification", 0];
         [20] call FLO_fnc_addReward;
         playMusic "EventTrack01_F_Curator";
         execVM 'Scripts\HeliDis.sqf';
