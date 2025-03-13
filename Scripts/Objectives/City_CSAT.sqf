@@ -75,12 +75,12 @@ _trg setTriggerTimeout [10, 10, 10, true];
 _trg setTriggerStatements [
     "this",
     "
-    [parseText '<t color=""#1AA3FF"" font=""PuristaBold"" align = ""right"" shadow = ""1"" size=""2"">SITREP</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Esta ciudad ahora pertenece a la guardia,</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Mantener la posicion hasta que lleguen refuerzos,</t>', [0, 0.5, 1, 1], nil, 5, 1.7, 0] remoteExec ['BIS_fnc_textTiles', 0];
+    [parseText '<t color=""#1AA3FF"" font=""PuristaBold"" align = ""right"" shadow = ""1"" size=""2"">SITREP</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Fuerzas Amigas Dominando la Batalla,</t><br /><t color=""#959393"" align = ""right"" shadow = ""1"" size=""0.8"">Mantened la lucha, capturaremos y aseguraremos la posicion,</t>', [0, 0.5, 1, 1], nil, 5, 1.7, 0] remoteExec ['BIS_fnc_textTiles', 0];
     _allMarks = allMapMarkers select {markerType _x == 'o_installation'};
     _FOBMrk = [_allMarks, thisTrigger] call BIS_fnc_nearestPosition;
     _FOBMrk setMarkerColor 'ColorGrey';
     _attackingAtGrid = mapGridPosition getMarkerPos _FOBMrk;
-    [[west,'HQ'], 'Objetivo aliado capturado en: ' + _attackingAtGrid] remoteExec ['sideChat', 0];
+    [[west,'MTI'], 'Objetivo aliado capturado en: ' + _attackingAtGrid] remoteExec ['sideChat', 0];
     [thisTrigger] execVM 'Scripts\Objectives\City_CSAT_CAPTURE_West.sqf';
     ",
     ""
