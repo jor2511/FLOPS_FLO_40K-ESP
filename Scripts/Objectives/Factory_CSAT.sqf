@@ -145,7 +145,7 @@ _TFOBB setTriggerActivation [""EAST SEIZED"", ""PRESENT"", false];
 _TFOBB setTriggerStatements [
 'this && {(alive _x) && ((side _x) == WEST) && (position _x inArea thisTrigger)} count allUnits < 5 ','
 
-[playerSide, 'HQ'] commandChat 'A todos los guardias, retrocedan este punto esta perdido,...';
+[playerSide, 'MTI'] commandChat 'Replegaos, perdimos la region,...';
 
 _allMarks = allMapMarkers select {markerPos _x inArea thisTrigger && markerType _x == 'b_installation'};  
 	{ deleteMarker _x ; } forEach _allMarks; 
