@@ -44,7 +44,7 @@ _PRL = [_HPAD getPos [(10 +(random 20)), (0 + (random 360))], East, [selectRando
 [_PRL, _HPAD getPos [(10 +(random 20)), (0 + (random 360))], 50] call BIS_fnc_taskPatrol;
 
 _V addEventHandler ["Killed", {  
-["ScoreAdded", ["Enemy Aircraft Sabotaged", 20]] remoteExec ["BIS_fnc_showNotification", 0];
+["ScoreAdded", ["Aeronave Enemiga Saboteada", 20]] remoteExec ["BIS_fnc_showNotification", 0];
 [20] call FLO_fnc_addReward;
  playMusic "EventTrack01_F_Curator"; 
 
