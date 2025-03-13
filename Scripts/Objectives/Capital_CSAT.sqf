@@ -181,7 +181,7 @@ private _fnc_createTrigger = {
         private _FOBMrk = [_allMarks, thisTrigger] call BIS_fnc_nearestPosition;
         _FOBMrk setMarkerColor 'ColorGrey';
         private _attackingAtGrid = mapGridPosition getMarkerPos _FOBMrk;
-        [[west,'HQ'], 'Objetivo aliado capturado en: ' + _attackingAtGrid] remoteExec ['sideChat', 0];
+        [[west,'MTI'], 'Objetivo aliado capturado en: ' + _attackingAtGrid] remoteExec ['sideChat', 0];
         
         [thisTrigger] execVM 'Scripts\City_CSAT_CAPTURE_West.sqf';
         ",
