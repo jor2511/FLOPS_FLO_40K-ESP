@@ -11,8 +11,8 @@ _mrkr setMarkerSize [0.7, 0.7];
 _mrkr setMarkerColor "colorCivilian";  
 _mrkr setMarkerAlpha 0.7;
 								sleep 1;
-								["showNotification", ["+ NUEVO INTEL", "Inteligencia sobre Prisioneros de Guerra Recibida", "intel"]] call FLO_fnc_intelSystem;
+								["showNotification", ["+ NUEVA INTEL", "Inteligencia sobre Prisioneros de Guerra Recibida", "intel"]] call FLO_fnc_intelSystem;
 									_attackingAtGrid = mapGridPosition getMarkerPos _mrkr;
-								[[west,"HQ"], "Enemy Presence Confirmed at grid " + _attackingAtGrid] remoteExec ["sideChat", 0];
+								[[west,"MTI"], "Presencia enemiga confirmada en " + _attackingAtGrid] remoteExec ["sideChat", 0];
 
  
