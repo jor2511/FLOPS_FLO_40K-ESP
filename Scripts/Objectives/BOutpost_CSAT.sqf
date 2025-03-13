@@ -23,7 +23,7 @@ _V setDir _dir;
 sleep 3;
 
 _V addEventHandler ["Killed", {  
-["ScoreAdded", ["Aeronave enemiga saboteada", 20]] remoteExec ["BIS_fnc_showNotification", 0];
+["ScoreAdded", ["Aeronave Enemiga Saboteada", 20]] remoteExec ["BIS_fnc_showNotification", 0];
 [20] call FLO_fnc_addReward;
  playMusic "EventTrack01_F_Curator"; 
  execVM 'Scripts\HeliDis.sqf';
@@ -172,7 +172,7 @@ _allMarks = allMapMarkers select {markerType _x == 'n_support'};
 _FOBMrk = [_allMarks,  thisTrigger] call BIS_fnc_nearestPosition;
 						_FOBMrk setMarkerColor 'ColorGrey' ;	
 									_attackingAtGrid = mapGridPosition getMarkerPos _FOBMrk;
-								[[west,'HQ'], 'Fuerzas aliadas dominando la batalla en coordenadas:  ' + _attackingAtGrid] remoteExec ['sideChat', 0];
+								[[west,'MTI'], 'Fuerzas aliadas dominando la batalla en coordenadas:  ' + _attackingAtGrid] remoteExec ['sideChat', 0];
 
 [thisTrigger] execVM 'Scripts\Objectives\Outpost_CSAT_CAPTURE_West.sqf';
 
