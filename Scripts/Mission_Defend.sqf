@@ -57,7 +57,7 @@ sleep 600 ;
 
 ["showNotification", [¡ADVERTENCIA!, "Los informes confirman que las fuerzas enemigas se estan movilizando, ¡preparate para el combate!", "warning"]] call FLO_fnc_intelSystem;
 _attackingAtGrid = mapGridPosition getMarkerPos ENMASSMAINmarkerName;
-[[west,"HQ"], "Zona aliada bajo ataque en: " + _attackingAtGrid] remoteExec ["sideChat", 0];
+[[west,"MTI"], "Posicion aliada bajo ataque en: " + _attackingAtGrid] remoteExec ["sideChat", 0];
 
 
 playMusic "LeadTrack05_F_Tank";
