@@ -55,7 +55,7 @@ publicVariable "ZEUSNetworkId";
  }; 
 
 
-hint "PUEDE CAMBIAR A JUGADORES HUMANOS";
+hint "NO PUEDE CAMBIAR A JUGADORES HUMANOS";
 };
 
 if ((_Unt isKindOf  "Man") && (!isPlayer _Unt)) then {
